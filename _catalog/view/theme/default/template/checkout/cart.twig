@@ -1,0 +1,103 @@
+{{ header }}
+<div id="checkout-cart" class="">
+
+    <section id="breadcrumbs">
+        <div class="container-fluid px-0 py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 mb-1 d-none d-sm-block">
+                        <ul class="list-inline">
+                            {% for breadcrumb in breadcrumbs %}
+                                <li class="list-inline-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="m-0">{{ heading_title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cartOne" class="py-5">
+        <div class="container pt-lg-3">
+{#            {% if attention %}#}
+{#                <div class="alert alert-info"><i class="fa fa-info-circle"></i> {{ attention }}#}
+{#                    <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            {% if success %}#}
+{#                <div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> {{ success }}#}
+{#                    <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            {% if error_warning %}#}
+{#                <div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}#}
+{#                    <button type="button" class="close" data-dismiss="alert">&times;</button>#}
+{#                </div>#}
+{#            {% endif %}#}
+            <form action="{{ action }}" method="post" enctype="multipart/form-data">
+            {% for product in products %}
+                <div class="row align-items-center cartRow mb-md-3 mb-xl-5">
+                    <div class="col-3 col-sm-2 col-md-auto pr-3 pr-lg-5 cartProductItem">
+                        {% if product.thumb %}<img src="{{ product.thumb }}" alt="" class="img-fluid">{% endif %}
+                    </div>
+                    <div class="col-9 col-sm-10 col-md px-3 px-lg-5 cartProductItem">
+                        <div>
+                            <p class="article">Артикул: <span>{{ product.article }}</span></p>
+                            <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                        </div>
+                    </div>
+                    <div class="col-6 justify-content-end order-4 order-md-3 col-md-3 px-3 px-lg-5 cartProductItem">
+                        <p class="prodPrice">{{ product.total }} <span>₸</span></p>
+                    </div>
+                    <div class=" col-6 justify-content-center col-md-auto px-3 px-lg-5 cartProductItem">
+                        <div class="prodQty">
+                            <button id="minus" class="minus btnQty" onClick="document.getElementById('{{ product.cart_id }}').value=parseInt(document.getElementById('{{ product.cart_id }}').value)-1"></button>
+                            <input id="{{ product.cart_id }}" class="inpQty" type="text" name="quantity[{{ product.cart_id }}]" value="{{ product.quantity }}" readonly>
+
+                            <button id="plus" class="plus btnQty" onClick="document.getElementById('{{ product.cart_id }}').value=parseInt(document.getElementById('{{ product.cart_id }}').value)+1"></button>
+                        </div>
+                    </div>
+                    <div class="order-last col-12 col-md-auto pl-3 pl-lg-5 text-center text-md-left">
+                        <button class="deleteCart" onclick="cart.remove('{{ product.cart_id }}');"><i class="fa fa-trash-o"></i></button>
+                    </div>
+                </div>
+            {% endfor %}
+            </form>
+            <div class="row align-items-center mb-4">
+                <div class="col-6 d-none d-sm-block">
+                    <button class="goCatalog" onclick="location = '/index.php?route=product/category&path=18'"><i class="fa fa-long-arrow-left mr-2"></i>Продолжить покупки</button>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="row justify-content-center justify-content-sm-end align-items-center">
+                        <div class="col-auto">
+                            <span class="totalProduct">Итого <span>{{ products|length }}</span> {% if products|length < 2 %}товар{% elseif products|length < 5 %}товара{% else %}товаров{% endif %} на сумму:</span>
+                        </div>
+                        <div class="col-auto">
+                            {% for total in totals|slice(0,1) %}
+                            <span class="totalPrice">{{ total.text }} <span>₸</span></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center mb-4">
+                <div class="col-12 col-lg order-last order-lg-first text-center text-lg-left pt-4 pt-lg-0 d-none d-sm-block">
+                    <ul class="stepCart list-inline">
+                        <li class="list-inline-item active">Корзина</li>
+                        <li class="list-inline-item">Оформление заказа</li>
+                        <li class="list-inline-item">Заказ принят</li>
+                    </ul>
+                </div>
+                <div class="col-lg-auto col-12 text-center">
+                    <button class="cartNextStep" onclick="location = '{{ checkout }}'">Оформить заказ</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+{{ footer }} 

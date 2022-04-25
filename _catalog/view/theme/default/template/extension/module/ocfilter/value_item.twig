@@ -1,0 +1,40 @@
+
+
+{% if option.image %}
+<div class="ocf-image" style="background-image: url({{ value.image }});"></div>
+{% endif %}
+
+{% if value.selected %}
+<label id="v-{{ value.id }}" class="ocf-selected filterLabel {% if option.color %}filterColor{% endif %}" data-option-id="{{ option.option_id }}">{{ value.name }}
+    <input type="{{ option.type }}" name="ocf[{{ option.option_id }}]" value="{{ value.params }}" checked="checked" class="ocf-target" autocomplete="off" />
+    <span class="checkmark"></span>
+    {% if option.color %}
+        <span class="checkmark2" style="background-color: #{{ value.color }};"></span>
+    {% endif %}
+    {% if show_counter %}
+        <small class="badge"></small>
+    {% endif %}
+</label>
+{% elseif value.count %}
+<label class="filterLabel {% if option.color %}filterColor{% endif %}" id="v-{{ value.id }}" data-option-id="{{ option.option_id }}">{{ value.name }}
+    <input type="{{ option.type }}" name="ocf[{{ option.option_id }}]" value="{{ value.params }}" class="ocf-target" autocomplete="off" />
+    <span class="checkmark"></span>
+    {% if option.color %}
+        <span class="checkmark2" style="background-color: #{{ value.color }};"></span>
+    {% endif %}
+    {% if show_counter %}
+        <small class="badge">{{ value.count }}</small>
+    {% endif %}
+</label>
+{% else %}
+<label class="filterLabel disabled {% if option.color %}filterColor{% endif %}" id="v-{{ value.id }}" data-option-id="{{ option.option_id }}">{{ value.name }}
+    <input type="{{ option.type }}" name="ocf[{{ option.option_id }}]" value="" disabled="disabled" class="ocf-target" autocomplete="off" />
+    <span class="checkmark"></span>
+    {% if option.color %}
+        <span class="checkmark2" style="background-color: #{{ value.color }};"></span>
+    {% endif %}
+    {% if show_counter %}
+        <small class="badge">0</small>
+    {% endif %}
+</label>
+{% endif %}

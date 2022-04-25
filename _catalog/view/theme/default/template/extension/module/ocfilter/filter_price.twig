@@ -1,0 +1,162 @@
+{% if show_price %}
+    <style>
+        #price-from, #price-to {
+            width: 70px;
+            height: 25px;
+            line-height: 1;
+            font-weight: 500;
+            font-size: 13px;
+            color: #000000;
+            padding: 6px 12px;
+            border-radius: 13px;
+            border: 1px solid #8b8b8b;
+            display: inline-block;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .priceText {
+            font-size: 13px;
+            color: #000000;
+        }
+        .popover {
+            display: none !important;
+        }
+    </style>
+<div class="filterPrice px-4 py-4 ocfilter-option" data-toggle="popover-price">
+    <h6 class="mb-3">По цене (тг):</h6>
+    <div class="filterSlider">
+        <div class="d-flex justify-content-between">
+            <span class="priceText">от&nbsp;&nbsp;<span id="price-from">{{ min_price_get }}</span></span>
+            <span class="priceText">до&nbsp;&nbsp;<span id="price-to">{{ max_price_get }}</span></span>
+        </div>
+        <div class="ocf-option-values mt-4 mb-3">
+            <div id="scale-price" class="scale ocf-target" data-option-id="p"
+                 data-start-min="{{ min_price_get }}"
+                 data-start-max="{{ max_price_get }}"
+                 data-range-min="{{ min_price }}"
+                 data-range-max="{{ max_price }}"
+                 data-element-min="#price-from"
+                 data-element-max="#price-to"
+                 data-control-min="#min-price-value"
+                 data-control-max="#max-price-value"
+            ></div>
+        </div>
+    </div>
+
+</div>
+{% endif %}
+
+
+{#<div class="filterPrice px-4 py-4">#}
+{#    <h6 class="mb-3">По цене (тг):</h6>#}
+{#    <div class="filterSlider">#}
+{#        <label class="float-left">от&nbsp;&nbsp;<input type="tel"#}
+{#                                                       data-bind="value: from, valueUpdate: 'afterkeydown'"></label>#}
+{#        <label class="float-right">до&nbsp;&nbsp;<input type="tel"#}
+{#                                                        data-bind="value: to, valueUpdate: 'afterkeydown'"></label>#}
+{#        <div class="clearfix"></div>#}
+{#        <div class="mt-4 mb-3"#}
+{#             data-bind="slider: { from: from, to: to }, sliderOptions: { min: 0, max: 99999, range: true, step: 1 }"></div>#}
+{#    </div>#}
+{#</div>#}
+
+{#<script>#}
+
+{#</script>#}
+{#<div class="filterAccordion">#}
+{#    <button class="accordion py-4 px-4">Каркас:</button>#}
+{#    <div class="accordion-content pl-5 pr-4">#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">сосна#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#    </div>#}
+{#    <button class="accordion py-4 px-4">Цвет:</button>#}
+{#    <div class="accordion-content pl-5 pr-4">#}
+{#        <label class="filterLabel filterColor">венге#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #645452;"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel filterColor">черный#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #000000;"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel filterColor">белый#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #FFFFFF;"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel filterColor">венге#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #645452;"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel filterColor">черный#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #000000;"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel filterColor">белый#}
+{#            <input type="checkbox">#}
+{#            <span class="checkmark"></span>#}
+{#            <span class="checkmark2" style="background-color: #FFFFFF;"></span>#}
+{#        </label>#}
+{#    </div>#}
+{#    <button class="accordion py-4 px-4">Количество замков:</button>#}
+{#    <div class="accordion-content pl-5 pr-4">#}
+{#        <label class="filterLabel">1 замок#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">2 замка#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">1 замок#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">2 замка#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">1 замок#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#        <label class="filterLabel">2 замка#}
+{#            <input type="radio" name="countLock">#}
+{#            <span class="checkmark"></span>#}
+{#        </label>#}
+{#    </div>#}
+{#</div>#}

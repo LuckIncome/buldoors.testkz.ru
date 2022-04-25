@@ -1,0 +1,245 @@
+
+{% if shipping_methods %}
+{% if shipping %}
+    <div class="sectionDelivery mb-4 mb-sm-5">
+    <h5 class="mb-4">Доставка</h5>
+    <div class="switcher d-flex align-items-center mb-4">
+    <div class="row align-items-center ">
+    <div class="col-xl-auto pr-xl-4">
+    <div class="d-flex align-items-center justify-content-center justify-content-sm-start">
+{% for key,shipping_method in shipping_methods|slice(0,1) %}
+    {% if not shipping_method.error %}
+        {% for quote in shipping_method.quote %}
+            <label for="{{ quote.code }}" class="mr-3">{{ shipping_method.title }}</label>
+            <span class="toggle-bg">
+            {% if quote.code == code %}
+                <input type="radio" name="shipping_method" value="{{ quote.code }}" id="{{ quote.code }}"
+                       checked="checked"
+                       class="cartCheck">
+            {% else %}
+            <input type="radio" name="shipping_method" value="{{ quote.code }}" id="{{ quote.code }}"
+                   class="cartCheck">
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <div class="error">{{ shipping_method.error }}</div>
+    {% endif %}
+{% endfor %}
+{% for key,shipping_method in shipping_methods|slice(1,2) %}
+    {% if not shipping_method.error %}
+        {% for quote in shipping_method.quote %}
+            {% if quote.code == code %}
+                <input type="radio" name="shipping_method" value="{{ quote.code }}" data-value="{{ quote.cost }}" id="{{ quote.code }}"
+                       checked="checked"
+                       class="cartCheck">
+            {% else %}
+                <input type="radio" name="shipping_method" value="{{ quote.code }}" data-value="{{ quote.cost }}" id="{{ quote.code }}"
+                       class="cartCheck">
+            {% endif %}
+                <span class="switch"></span>
+            </span>
+            <label for="{{ quote.code }}" class="ml-3 active">{{ shipping_method.title }}</label>
+        {% endfor %}
+    {% else %}
+        <div class="error">{{ shipping_method.error }}</div>
+    {% endif %}
+{% endfor %}
+</div>
+</div>
+<div class="col-xl text-center text-sm-left text-xl-right">
+    <span class="deliveryDesc justify-content-end">*Заказы, общей стоимостью свыше 12 000, доставляются бесплатно</span>
+</div>
+</div>
+</div>
+</div>
+    {% else %}
+        <select class="form-control" name="shipping_method">
+            {% for shipping_method in shipping_methods %}
+                {% if not shipping_method.error %}
+                    {% for quote in shipping_method.quote %}
+                        {% if quote.code == code %}
+                            {% set code = quote.code %}
+                            {% set exists = true %}
+                        <option value="{{ quote.code }}" data-value="{{ quote.cost }}" selected="selected">
+                        {% else %}
+                            <option value="{{ quote.code }}" data-value="{{ quote.cost }}">
+                        {% endif %}
+                        {{ quote.title }}&nbsp;&nbsp;({{ quote.text }})</option>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </select><br/>
+    {% endif %}
+
+{% endif %}
+    {% if delivery and (not delivery_delivery_time or delivery_delivery_time == '1' or delivery_delivery_time == '3') %}
+        <hr>
+        <div{{ delivery_required ? ' class="required"' }}>
+            <label class="control-label"><strong>{{ text_delivery }}</strong></label>
+            {% if delivery_delivery_time == '1' %}
+                <input type="text" name="delivery_date" value="{{ delivery_date }}" class="form-control date"
+                       readonly="true"
+                       style="background:#ffffff;"/>
+            {% else %}
+                <input type="text" name="delivery_date" value="{{ delivery_date }}" class="form-control date"
+                       readonly="true"
+                       style="background:#ffffff;"/>
+            {% endif %}
+            {% if delivery_delivery_time == '3' %}<br/>
+                <select name="delivery_time"
+                        class="form-control">{% for quickcheckout_delivery_time in delivery_times %}
+                        {% if quickcheckout_delivery_time[language_id] %}
+                            {% if delivery_time == quickcheckout_delivery_time[language_id] %}
+                                <option value="{{ quickcheckout_delivery_time[language_id] }}"
+                                        selected="selected">{{ quickcheckout_delivery_time[language_id] }}</option>
+                            {% else %}
+                                <option value="{{ quickcheckout_delivery_time[language_id] }}">{{ quickcheckout_delivery_time[language_id] }}</option>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}</select>
+            {% endif %}
+        </div>
+    {% elseif delivery_delivery_time and delivery_delivery_time == '2' %}
+        <input type="text" name="delivery_date" value="" class="hide"/>
+        <select name="delivery_time" class="hide">
+            <option value=""></option>
+        </select>
+        <strong>{{ text_estimated_delivery }}</strong><br/>
+        {{ estimated_delivery }}<br/>
+        {{ estimated_delivery_time }}
+    {% else %}
+        <input type="text" name="delivery_date" value="" class="hide"/>
+        <select name="delivery_time" class="hide">
+            <option value=""></option>
+        </select>
+    {% endif %}
+
+<script type="text/javascript"><!--
+
+
+    swicthLabel = $('.switcher label');
+    swicthLabel.click(function () {
+        $(this).siblings('label').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    swicthInput = $('.switcher .cartCheck');
+    swicthInput.change(function () {
+        if (this.checked) {
+            idx = $(this).attr('id');
+            $(this).parent().siblings('label').css({'color': '#868686'});
+            $('.switcher').find("[for='" + idx + "']").css({'color': '#000000'});
+        }
+    });
+    $('#shipping-method input[name=\'shipping_method\'], #shipping-method select[name=\'shipping_method\']').on('change', function () {
+        {% if not logged %}
+        if ($('#payment-address input[name=\'shipping_address\']:checked').val()) {
+            var post_data = $('#payment-address input[type=\'text\'], #payment-address input[type=\'checkbox\']:checked, #payment-address input[type=\'radio\']:checked, #payment-address input[type=\'hidden\'], #payment-address select, #shipping-method input[type=\'text\'], #shipping-method input[type=\'checkbox\']:checked, #shipping-method input[type=\'radio\']:checked, #shipping-method input[type=\'hidden\'], #shipping-method select, #shipping-method textarea');
+        } else {
+            var post_data = $('#shipping-address input[type=\'text\'], #shipping-address input[type=\'checkbox\']:checked, #shipping-address input[type=\'radio\']:checked, #shipping-address input[type=\'hidden\'], #shipping-address select, #shipping-method input[type=\'text\'], #shipping-method input[type=\'checkbox\']:checked, #shipping-method input[type=\'radio\']:checked, #shipping-method input[type=\'hidden\'], #shipping-method select, #shipping-method textarea');
+        }
+
+        $.ajax({
+            url: 'index.php?route=extension/quickcheckout/shipping_method/set',
+            type: 'post',
+            data: post_data,
+            dataType: 'html',
+            cache: false,
+            success: function (html) {
+                {% if cart %}
+                loadCart();
+                {% endif %}
+
+                {% if shipping_reload %}
+                reloadPaymentMethod();
+                {% endif %}
+
+                oldCost = parseInt($('.totalPrice').text());
+                newCost = parseInt($(this).data('value'));
+
+                $('.totalPrice').html(oldCost + newCost + '<span>₸</span>')
+            },
+            {% if debug %}
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+            {% endif %}
+        });
+        {% else %}
+        if ($('#shipping-address input[name=\'shipping_address\']:checked').val() == 'new') {
+            var url = 'index.php?route=extension/quickcheckout/shipping_method/set';
+            var post_data = $('#shipping-address input[type=\'text\'], #shipping-address input[type=\'checkbox\']:checked, #shipping-address input[type=\'radio\']:checked, #shipping-address input[type=\'hidden\'], #shipping-address select, #shipping-method input[type=\'text\'], #shipping-method input[type=\'checkbox\']:checked, #shipping-method input[type=\'radio\']:checked, #shipping-method input[type=\'hidden\'], #shipping-method select, #shipping-method textarea');
+        } else {
+            var url = 'index.php?route=extension/quickcheckout/shipping_method/set&address_id=' + $('#shipping-address select[name=\'address_id\']').val();
+            var post_data = $('#shipping-method input[type=\'text\'], #shipping-method input[type=\'checkbox\']:checked, #shipping-method input[type=\'radio\']:checked, #shipping-method input[type=\'hidden\'], #shipping-method select, #shipping-method textarea');
+        }
+
+        $.ajax({
+            url: url,
+            type: 'post',
+            data: post_data,
+            dataType: 'html',
+            cache: false,
+            success: function (html) {
+                {% if cart %}
+                loadCart();
+                {% endif %}
+
+                {% if shipping_reload %}
+                if ($('#payment-address input[name=\'payment_address\']').val() == 'new') {
+                    reloadPaymentMethod();
+                } else {
+                    reloadPaymentMethodById($('#payment-address select[name=\'address_id\']').val());
+                }
+                {% endif %}
+            },
+            {% if debug %}
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+            }
+            {% endif %}
+        });
+        {% endif %}
+    });
+
+    $(document).ready(function () {
+        $('#shipping-method input[name=\'shipping_method\']:checked, #shipping-method select[name=\'shipping_method\']').trigger('change');
+    });
+
+    {% if delivery and delivery_delivery_time == '1' %}
+    $(document).ready(function () {
+        $('input[name=\'delivery_date\']').datetimepicker({
+            format: 'DD.MM.YYYY HH:mm',
+            minDate: '{{ delivery_min }}',
+            maxDate: '{{ delivery_max }}',
+            disabledDates: [{{ delivery_unavailable }}],
+            enabledHours: [{{ hours }}],
+            ignoreReadonly: true,
+            locale: 'ru',
+            widgetPositioning: {
+                horizontal: 'left',
+                vertical: 'bottom'
+            },
+            {% if delivery_days_of_week != '' %}
+            daysOfWeekDisabled: [{{ delivery_days_of_week }}]
+            {% endif %}
+        });
+    });
+    {% elseif delivery and (delivery_delivery_time == '3' or delivery_delivery_time == '0') %}
+    $('input[name=\'delivery_date\']').datetimepicker({
+        format: 'DD.MM.YYYY',
+        minDate: '{{ delivery_min }}',
+        maxDate: '{{ delivery_max }}',
+        disabledDates: [{{ delivery_unavailable }}],
+        ignoreReadonly: true,
+        locale: 'ru',
+        widgetPositioning: {
+            horizontal: 'left',
+            vertical: 'bottom'
+        },
+        {% if delivery_days_of_week != '' %}
+        daysOfWeekDisabled: [{{ delivery_days_of_week }}]
+        {% endif %}
+    });
+    {% endif %}
+    //--></script>

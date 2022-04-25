@@ -1,0 +1,119 @@
+{{ header }}
+<div id="product-compare">
+
+
+    <section id="breadcrumbs">
+        <div class="container-fluid px-0 py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 mb-1 d-none d-sm-block">
+                        <ul class="list-inline">
+                            {% for breadcrumb in breadcrumbs %}
+                                <li class="list-inline-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="m-0">{{ heading_title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="compareProduct" class="py-3 py-xl-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-lg-3 col-xl-2 align-items-start flex-column d-flex px-0">
+                    <div class="w-100 mb-auto pl-2">
+                        <a href="/index.php?route=product/category&path=18" class="goCatalog"><i class="fa fa-long-arrow-left mr-2"></i>Назад к товарам</a>
+                    </div>
+                    <div class="w-100">
+                        <ul class="list-group attribute w-100 attrName">
+                            {% for attribute_group in attribute_groups %}
+                                {% if attribute_group.name == 'Основные характеристики' %}
+                                    {% for attribute in attribute_group.attribute %}
+                                    <li class="list-group-item border-0 px-2">{{ attribute.name }}</li>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-9 col-xl-10">
+                    <div class="row flex-nowrap flex-xl-wrap compareRow">
+                        {% for product in products %}
+                        <div class="col-12 col-sm-8 col-md-5 col-xl-3 px-0">
+                            <div class="productItem mb-4">
+                                <a href="{{ product.href }}" class="imgProd p-3">
+                                    <img src="{{ product.thumb }}" alt="{{ product.name }}" class="img-fluid">
+                                </a>
+                                <div class="prodCaptions list">
+                                    <div class="prodTitle py-2 px-3">
+                                        <span>{{ product.model }}</span>
+                                        <h4><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                                    </div>
+									<div class="prodQty d-none">
+									<button id="minus" class="minus btnCount"></button>
+									<input id="countProduct{{ product.product_id }}"
+									class="countProduct" type="tel" readonly value="1">
+									<button id="plus" class="plus btnCount"></button>
+									<script>
+
+$('.btnCount').on('click', function () {
+val = parseInt($('#countProduct{{ product.product_id }}').val());
+if ($(this).attr('id') === 'plus') {
+$('#countProduct{{ product.product_id }}').val(val + 1);
+
+} else if ($(this).attr('id') === 'minus' && val > 1) {
+$('#countProduct{{ product.product_id }}').val(val - 1);
+}
+
+
+})
+
+</script>
+</div>
+                                    <span class="prodPrice px-3">
+                                        {% if product.special %}
+                                            {{ product.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ product.price }} <span
+                                                    style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                        {% else %}
+                                            {{ product.price }} <span>₸</span>
+                                        {% endif %}
+                                    </span>
+                                    <div class="buttonsProd p-3">
+                                        <div class="prodBtns">
+                                            <button id="cart{{ product.product_id }}" class="prodBtnBuy"
+                                                    onclick="cart.add('{{ product.product_id }}', '{{ product.minimum }}');">
+                                                Купить
+                                            </button>
+                                            <button onclick="location = '{{ product.remove }}'" class="deleteCart float-right"><i class="fa fa-trash-o"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list-group attribute">
+                                {% for attribute_group in attribute_groups %}
+                                    {% if attribute_group.name == 'Основные характеристики' %}
+                                    {% for key, attribute in attribute_group.attribute %}
+                                        {% if product.attribute[key] %}
+                                            <li class="list-group-item border-0 px-2">{{ product.attribute[key] }}</li>
+                                        {% else %}
+                                            <li class="list-group-item border-0 px-2"></li>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+{{ footer }} 

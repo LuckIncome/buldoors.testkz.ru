@@ -1,0 +1,7 @@
+<div id="cart">
+    <a href="{{ cart }}" id="carttotal" class="button"><img src="img/cart.svg" alt="">
+        {% if text_items != 0 %}
+            <span id="cart-total">{{ text_items }}</span>
+        {% endif %}
+    </a>
+</div>

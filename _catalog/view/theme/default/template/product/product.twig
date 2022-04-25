@@ -1,0 +1,776 @@
+{{ header }}
+<div id="product-product" class="">
+
+    <section id="breadcrumbs">
+        <div class="container-fluid px-0 py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 mb-1 d-none d-sm-block">
+                        <ul class="list-inline">
+                            {% for breadcrumb in breadcrumbs %}
+                                {% if breadcrumb.text == 'Новость'  %}
+                                <li class="list-inline-item"><a href="{{ breadcrumb.href }}">{{ article }}</a></li>
+                                {% else %}
+                                <li class="list-inline-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="m-0">{{ heading_title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if heading_title == 'Новость' %}
+
+    <section id="newsPage" class=" py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mb-4 mb-xl-0">
+                    <h2>{{ article }}</h2>
+                    <span class="d-block mb-3" style="font-size: 14px;color: rgba(0, 0, 0, 0.5);"><img src="/img/newsDateIcon.png" width="10" height="10" alt="" class="mr-2">{{ date|date("d.m.Y") }}</span>
+                    {% if images %}
+                        {% for new2 in news_myvers_2 %}
+                            <img class="d-block mb-3 img-fluid mx-auto" src="{{ new2.thumb }}" alt="{{ heading_title }}">
+                        {% endfor %}
+                    {% endif %}
+                    <div class="text-justify">{{ description }}</div>
+                    <hr class="mb-0 d-block d-xl-none">
+                </div>
+                <div class="col-xl-3">
+                    <section id="news" class="">
+                            <div class="row">
+                                {% if news|length > 3 %}
+                                    {% for new in news|slice(0,2) %}
+                                        {% if new.product_id != product_id %}
+                                        <div class="col-sm-6 col-xl-12 p-4">
+                                            <div class="newsItem">
+                                                <img src="{{ new.thumb }}" alt="{{ new.sku }}" class="d-block">
+                                                <div class="p-3 newsCaption">
+                                                    <time datetime="" class="d-block mb-3">{{ new.date|date("d.m.Y") }}</time>
+                                                    <p class="mb-3"><strong>{{ new.sku }}</strong></p>
+                                                    <span class="mb-2 d-block"><p>{{ new.description|slice(0,90) }}...</p></span>
+                                                    <a href="{{ new.href }}" class="moreNews">Подробнее</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    </div>
+    {% else %}
+
+    <section id="productPage" class=" py-5">
+        <div class="container">
+            <div class="row">
+                {% if hasInteriorImage %}
+                    <div class="interior">
+                        <div class="interiorBg">
+                            <div class="fix-center-img"><img id="interiorBgImg" class="fit-height"
+                                                             src="/image/catalog/interiors/m-interior-1.jpg"></div>
+                        </div>
+                        <div class="interiorContent">
+                            <div class="productImage"><img id="interiorImg" class="product"
+                                                           src="{{ interiorImages[0]  }}"
+                                                           alt="{{ heading_title }}"></div>
+                            <div class="intOptions">
+                                <button type="button" class="round-button close-options">&times;
+                                </button>
+                                <div class="prod-interior">
+                                    <div class="prod-interior__settings">
+                                        <div class="interior-images">
+                                          {% for key,interiorImage in interiorImages %}
+                                                <a class="interior-image {% if key == 0 %} active {% endif %}"
+                                                   data-img="{{ interiorImage  }}"><img
+                                                            src="{{ interiorImage  }}"
+                                                            alt="{{ heading_title }}"></a>
+                                            {% endfor %}
+
+                                        </div>
+                                        <div class="prod-interior__settings-top">
+                                            <ul class="no-mark">
+                                                <li class="modern"><span>Modern</span></li>
+                                                <li class="pop"><span>Pop</span></li>
+                                                <li class="loft"><span>Loft</span></li>
+                                                <li class="classic"><span>Classic</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="prod-interior__settings-bottom">
+                                            <div class="interiors-line i--0"><a class="interior-item active"
+                                                                                data-img="/m-interior-1.jpg"><img
+                                                            src="/image/catalog/interiors/11a5303bb3e5625dd7f07100005972282b8dd4e8ddb4fd4a.jpg"
+                                                            alt="Интерьер Модерн-1"></a> <a
+                                                        class="interior-item" data-img="/p-interior-1.jpg"><img
+                                                            src="/image/catalog/interiors/c32a325c0cc459a55cec779a94f27a4ba4c3961c9ec23cee.jpg"
+                                                            alt="Интерьер Поп-1"></a> <a class="interior-item"
+                                                                                         data-img="/l-interior-1.jpg"><img
+                                                            src="/image/catalog/interiors/bcdf193bdff796ecc565c9727aae7b0cb205d6b3de011e9c.jpg"
+                                                            alt="Интерьер Лофт-1"></a> <a class="interior-item"
+                                                                                          data-img="/c-interior-1.jpg"><img
+                                                            src="/image/catalog/interiors/caf2f4e1b28623c33e526d1a14f89f5dfe4b7098773240b1.jpg"
+                                                            alt="Интерьер Классика-1"></a></div>
+                                            <div class="interiors-line i--1"><a class="interior-item"
+                                                                                data-img="/m-interior-2.jpg"><img
+                                                            src="/image/catalog/interiors/50af03a18e6775d6650b1a2a248d363c68baf2d1f54b1b59.jpg"
+                                                            alt="Интерьер Модерн-2"></a> <a
+                                                        class="interior-item" data-img="/p-interior-2.jpg"><img
+                                                            src="/image/catalog/interiors/d4532081558507c9931144878ea5cd4ad66584fc82e96baf.jpg"
+                                                            alt="Интерьер Поп-2"></a> <a class="interior-item"
+                                                                                         data-img="/l-interior-2.jpg"><img
+                                                            src="/image/catalog/interiors/5e653f35d913d31558ec45b2b6228c2bc1369b2399c05a6a.jpg"
+                                                            alt="Интерьер Лофт-2"></a> <a class="interior-item"
+                                                                                          data-img="/c-interior-2.jpg"><img
+                                                            src="/image/catalog/interiors/7f5402e0705488566e2123cec6ff9ef0e3ce4ffd4acd4531.jpg"
+                                                            alt="Интерьер Классика-2"></a></div>
+                                            <div class="interiors-line i--2"><a class="interior-item"
+                                                                                data-img="/m-interior-3.jpg"><img
+                                                            src="/image/catalog/interiors/6207f5b92b97f66222af64f8f6e19df6d826872781849cdb.jpg"
+                                                            alt="Интерьер Модерн-3"></a> <a
+                                                        class="interior-item" data-img="/p-interior-3.jpg"><img
+                                                            src="/image/catalog/interiors/099a693c4cb2a76bbf87ab4042ca698a9ece9e3c94ae7577.jpg"
+                                                            alt="Интерьер Поп-3"></a> <a class="interior-item"
+                                                                                         data-img="/l-interior-3.jpg"><img
+                                                            src="/image/catalog/interiors/22e7b98c3e3c78abb51335f8f56f7fb7fac97d767af638c6.jpg"
+                                                            alt="Интерьер Лофт-3"></a> <a class="interior-item"
+                                                                                          data-img="/c-interior-3.jpg"><img
+                                                            src="/image/catalog/interiors/645ef03b4cf9f6d4472f7a21218dc2c82bbc75297ada653d.jpg"
+                                                            alt="Интерьер Классика-3"></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="optsBtn show-opts" title="Выбрать интерьер"><i class="fa fa-cog"></i></a> <a
+                                    class="optsBtn minimize" title="Закрыть интерьер"><i
+                                        class="fa fa-compress"></i></a></div>
+                    </div>
+                    <div class="switcher interior-switcher">
+                        <a class="interiorBtn">Интерьер</a>
+                    </div>
+                    <script>
+                        $(document).ready(function () {
+                            $("a.interior-item").click(function () {
+                                $("a.interior-item").removeClass("active");
+                                var e = "/image/catalog/interiors" + $(this).data("img");
+                                $(this).addClass("active"), $("#interiorBgImg").attr("src", e)
+                            });
+                            $("a.interior-image").click(function () {
+                                $("a.interior-image").removeClass("active");
+                                var e = $(this).data("img");
+                                $(this).addClass("active"), $("#interiorImg").attr("src", e)
+                            });
+                            $('.interiorBtn').click(function () {
+                                $('.interior').toggleClass('activeInterior');
+                                $(this).toggleClass('active');
+                            });
+                            if($('.intOptions:visible')){
+                                $('.show-opts').hide();
+                                $('.intOptions button').show();
+                            }else {
+                                $('.show-opts').show();
+                                $('.intOptions button').hide();
+                            }
+                            $('.intOptions button').click(function () {
+                                $('.intOptions').hide();
+                                $('.show-opts').show();
+                            });
+                            $('.show-opts').click(function () {
+                                $('.intOptions').toggle();
+                                $('.intOptions button').show();
+                                $(this).hide();
+                            });
+                            $('.optsBtn.minimize').click(function () {
+                                $('.interior').removeClass('activeInterior');
+                            });
+                        });
+                    </script>
+                {% endif %}
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-10">
+                    <div class="row">
+                        <div class="mb-4 mb-md-0 offset-sm-2 offset-md-0 col-sm-8 col-md-6 col-lg-4">
+                            <div class="productImg mb-4">
+                                {% if thumb %}
+                                    <img src="{{ thumb }}" alt="{{ heading_title }}">
+                                {% endif %}
+                            </div>
+                            <div class="row mb-4">
+
+                                {% if images %}
+                                    {% for image in images|slice(0,3) %}
+                                        <div class="col-4">
+                                            <div class="productThumb">
+                                                <img src="{{ image.thumb }}" alt="{{ heading_title }}">
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <div class="productDesc p-4">
+                                <h4 class="mb-4">Описание</h4>
+                                <p>{{ description }}</p>
+                            </div>
+
+                            <div class="asideCta d-none d-md-block d-lg-none pt-5 px-4">
+                                <ul class="list-unstyled">
+                                    <li class="asideLink mb-4">
+                                        <a href="#" data-toggle="modal" data-target="#callback">Вызвать замерщика</a>
+                                    </li>
+                                    <li class="asideLink mb-3">
+                                        <a href="">Доставка</a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <ul class="list-unstyled asideDesc">
+                                            <li>- Забрать в магазине</li>
+                                            <li>- Доставка по адресу</li>
+                                        </ul>
+                                    </li>
+                                    <li class="asideLink pay mb-3">
+                                        <a href="">Оплата</a>
+                                    </li>
+                                    <li class="mb-4">
+                                        <ul class="list-unstyled asideDesc">
+                                            <li>- Наличными при получении</li>
+                                            <li>- Платежной картой при получении</li>
+                                            <li>- Платежной картой на сайте</li>
+                                            <li>- В рассрочку или в кредит</li>
+                                            <li>- Безналичное перечисление (только для юридических лиц)</li>
+                                            <li>- Через систему Kaspi.kz</li>
+                                            <li>- Кредитной картой Kaspi Red</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>Проконсультируем Вас бесплатно!</p>
+                                        <strong class="mb-4"><a href="tel:+7 (727) 294-24-72">+7 (727)
+                                                <span>294-24-72</span></a></strong>
+                                        <div><img src="img/payLogoLight.png" alt="" class="img-fluid"></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4 mb-lg-0 col-lg-8 px-md-4">
+                            <div class="productAttr">
+                                <div class="row mb-4 px-md-4">
+                                    <div class="col-lg-6 mb-3 mb-lg-0 text-center text-lg-left">
+                                        <h2>{{ heading_title }}</h2>
+                                    </div>
+                                    <div class="col-lg-6 mb-3 mb-lg-0 text-center text-lg-right">
+                                        {% if stock == 'Нет в наличии' or stock == 'Предзаказ' %}
+                                            <span class="prodInstock text-danger mr-2"
+                                                  style="background: none">{{ stock }}</span>
+                                        {% else %}
+                                            <span class="prodInstock mr-2">{{ stock }}</span>
+
+                                        {% endif %}
+                                        <span class="article ml-2">Артикул: <span>{{ article }}</span></span>
+                                    </div>
+                                </div>
+
+                                <div id="product">
+                                    {% if options %}
+                                    <div class="d-flex flex-column flex-lg-row justify-content-between px-4 pb-4">
+                                        {% for option in options %}
+                                            {% if option.type == 'radio' %}
+                                                <div class="text-center{% if option.required %} required {% endif %}">
+                                                    <label class="control-label mb-3">{{ option.name }}:
+                                                        <span></span></label>
+                                                    <div id="input-option{{ option.product_option_id }}">
+                                                        <div class="radio">
+                                                            {% for option_value in option.product_option_value|slice(0,4) %}
+                                                                <label data-option="{{ option_value.name }}">
+                                                                    {% if option_value.image %}
+                                                                    <span style="background: url('{{ option_value.image }}') no-repeat center; -webkit-background-size: cover;background-size: cover; "></span>
+                                                                    {% else %}
+                                                                    <span></span>
+                                                                    {% endif %}
+                                                                    <input type="radio"
+                                                                           name="option[{{ option.product_option_id }}]"
+                                                                           value="{{ option_value.product_option_value_id }}"/>
+                                                                </label>
+                                                            {% endfor %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                    <div class="row align-items-center px-md-4 mb-5">
+                                        <div class="col-sm-6 col-md-12 col-xl-6 mb-4 mb-sm-0 mb-md-4 mb-xl-0">
+                                            <span class="prodPrice float-left">{{ price }} <span>₸</span></span>
+                                            <div class="prodQty float-right">
+
+                                                <button id="minus" class="minus btnCount"></button>
+                                                <input name="quantity" id="input-quantity"
+                                                       class="countProduct" type="text" readonly value="1">
+                                                <button id="plus" class="plus btnCount"></button>
+                                                <script>
+
+                                                    $('.btnCount').on('click', function () {
+                                                        val = parseInt($('#input-quantity').val());
+                                                        if ($(this).attr('id') === 'plus') {
+                                                            $('#input-quantity').val(val + 1);
+
+                                                        } else if ($(this).attr('id') === 'minus' && val > 1) {
+                                                            $('#input-quantity').val(val - 1);
+                                                        }
+
+
+                                                    })
+
+                                                </script>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="col-sm-6 col-md-12 col-xl-6 text-center">
+                                            <div class="buttonsProd">
+                                                <div class="prodBtns">
+                                                    <input type="hidden" name="product_id"
+                                                           value="{{ product_id }}"/>
+                                                    <button type="button" id="button-cart"
+                                                            data-loading-text="{{ text_loading }}" class="prodBtnBuy"  onclick="hello_world();">
+                                                        Добавить в корзину
+                                                    </button>
+                                                    <button class="prodBtnComp d-none d-lg-inline" onclick="compare.add('{{ product_id }}');"><img src="img/prodBtnComp.png" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% if attribute_groups %}
+                                <div class="row">
+                                    <div class="col-12">
+                                        <nav class="productChar mb-4">
+                                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                                   href="#mainCharacter" role="tab" aria-controls="nav-home"
+                                                   aria-selected="true">Основные характеристики</a>
+                                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                                   href="#complectation" role="tab" aria-controls="nav-profile"
+                                                   aria-selected="false">Комплектация</a>
+                                            </div>
+                                        </nav>
+                                        <div class="tab-content productCharCont" id="nav-tabContent">
+
+                                            <div class="tab-pane fade show active" id="mainCharacter" role="tabpanel"
+                                                 aria-labelledby="nav-home-tab">
+                                                {% for attribute_group in attribute_groups %}
+                                                {% if attribute_group.name == 'Основные характеристики' %}
+                                                <ul class="list-unstyled">
+                                                    {% for attribute in attribute_group.attribute %}
+                                                    <li class="px-4 py-3">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-5">
+                                                                <p class="leftChar">{{ attribute.name }}:</p>
+                                                            </div>
+                                                            <div class="col-7">
+                                                                <p class="rightChar">{{ attribute.text }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    {% endfor %}
+                                                </ul>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                            <div class="tab-pane fade" id="complectation" role="tabpanel"
+                                                 aria-labelledby="nav-profile-tab">
+                                                {% for attribute_group in attribute_groups %}
+                                                {% if attribute_group.name == 'Комплектация' %}
+                                                <ul class="list-unstyled">
+                                                    {% for attribute in attribute_group.attribute %}
+                                                        <li class="px-4 py-3">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-5">
+                                                                    <p class="leftChar">{{ attribute.name }}:</p>
+                                                                </div>
+                                                                <div class="col-7">
+                                                                    <p class="rightChar">{{ attribute.text }}</p>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                                {% endif %}
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 px-xl-3 col-sm-8 offset-sm-2 offset-lg-0 pt-5 pt-lg-0 d-block d-md-none d-lg-block col-lg-2">
+                    <div class="asideCta">
+                        <ul class="list-unstyled">
+                            <li class="asideLink mb-4">
+                                <a href="" data-toggle="modal" data-target="#callback">Вызвать замерщика</a>
+                            </li>
+                            <li class="asideLink mb-3">
+                                <a href="">Доставка</a>
+                            </li>
+                            <li class="mb-4">
+                                <ul class="list-unstyled asideDesc">
+                                    <li>- Забрать в магазине</li>
+                                    <li>- Доставка по адресу</li>
+                                </ul>
+                            </li>
+                            <li class="asideLink pay mb-3">
+                                <a href="">Оплата</a>
+                            </li>
+                            <li class="mb-4">
+                                <ul class="list-unstyled asideDesc">
+                                    <li>- Наличными при получении</li>
+                                    <li>- Платежной картой при получении</li>
+                                    <li>- Платежной картой на сайте</li>
+                                    <li>- В рассрочку или в кредит</li>
+                                    <li>- Безналичное перечисление (только для юридических лиц)</li>
+                                    <li>- Через систему Kaspi.kz</li>
+                                    <li>- Кредитной картой Kaspi Red</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Проконсультируем Вас бесплатно!</p>
+                                <strong class="mb-4"><a href="tel:+7 (727) 294-24-72">+7 (727)
+                                        <span>294-24-72</span></a></strong>
+                                <div><img src="img/payLogoLight.png" alt="" class="img-fluid"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="tabsCategory">
+                <ul class="row scrollRow flex-nowrap">
+                    <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-1">Новинки</a></li>
+                    <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-2">Хиты продаж</a>
+                    </li>
+                    <li class="col-9 pl-5 pl-sm-0 col-lg-4 col-xl-3 scrollItem"><a
+                                href="#tabsCategory-3">Акции</a></li>
+                </ul>
+                <div id="tabsCategory-1" class="p-0">
+
+                    <div class="doorSlider owl-carousel newDoor row py-5 m-0">
+                        {% for product in new_products %}
+                            <div class="doorSlide">
+                                <a href="{{ product.href }}"><img src="{{ product.thumb }}"
+                                                                  alt="{{ product.name }}">
+                                    <div class="doorSlideCaption p-4">
+                                        <h4 class="mb-1">{{ product.name }}</h4>
+                                        {% if product.category %}
+                                            {% for category_name in product.category %}
+                                                <p class="mb-2">{{ category_name.name }}</p>
+                                            {% endfor %}
+                                        {% endif %}
+                                        <p class="price"><span>{% if product.special %}
+                                                        {{ product.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                        style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ product.price }} <span
+                                                            style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                    {{ product.price }} <span>₸</span>
+                                                {% endif %}</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-9 d-none d-md-block">
+                            <ul class='newDots owl-dots'></ul>
+                        </div>
+                        <div class="col-md-3 text-center text-md-right pr-md-5">
+                            <a href="" class="allDoors titlesYellow d-none">Все новинки</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="tabsCategory-2" class="p-0">
+
+                    <div class="doorSlider owl-carousel hitDoor row py-5">
+
+                        {% for bestseller in bestsellers %}
+                            <div class="doorSlide">
+                                <a href="{{ bestseller.href }}"><img src="{{ bestseller.thumb }}"
+                                                                     alt="{{ bestseller.name }}"></a>
+                                <div class="doorSlideCaption p-4">
+                                    <h4 class="mb-1">{{ bestseller.name }}</h4>
+                                    {% if bestseller.category %}
+                                        {% for category_name in bestseller.category %}
+                                            <p class="mb-2">{{ category_name.name }}</p>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <p class="price"><span>{% if bestseller.special %}
+                                                        {{ bestseller.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                    style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ bestseller.price }} <span
+                                                        style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                {{ bestseller.price }} <span>₸</span>
+                                            {% endif %}</span></p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-9 d-none d-md-block">
+                            <ul class='hitDots owl-dots'></ul>
+                        </div>
+                        <div class="col-md-3 text-center text-md-right pr-md-5">
+                            <a href="" class="allDoors titlesYellow d-none">Все хиты</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="tabsCategory-3" class="p-0">
+
+                    <div class="doorSlider owl-carousel saleDoor row py-5">
+
+                        {% for special in specials %}
+                            <div class="doorSlide">
+                                <a href="{{ special.href }}"><img src="{{ special.thumb }}"
+                                                                  alt="{{ special.name }}"></a>
+                                <div class="doorSlideCaption p-4">
+                                    <h4 class="mb-1">{{ special.name }}</h4>
+                                    {% if special.category %}
+                                        {% for category_name in special.category %}
+                                            <p class="mb-2">{{ category_name.name }}</p>
+                                        {% endfor %}
+                                    {% endif %}
+                                    <p class="price"><span>{% if special.special %}
+                                                        {{ special.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                    style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ special.price }} <span
+                                                        style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                {{ special.price }} <span>₸</span>
+                                            {% endif %}</span></p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-9 d-none d-md-block">
+                            <ul class='saleDots owl-dots'></ul>
+                        </div>
+                        <div class="col-md-3 text-center text-md-right pr-md-5">
+                            <a href="" class="allDoors titlesYellow d-none">Все акции</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+    <script type="text/javascript"><!--
+        $('select[name=\'recurring_id\'], input[name="quantity"]').change(function () {
+            $.ajax({
+                url: 'index.php?route=product/product/getRecurringDescription',
+                type: 'post',
+                data: $('input[name=\'product_id\'], input[name=\'quantity\'], select[name=\'recurring_id\']'),
+                dataType: 'json',
+                beforeSend: function () {
+                    $('#recurring-description').html('');
+                },
+                success: function (json) {
+                    $('.alert-dismissible, .text-danger').remove();
+
+                    if (json['success']) {
+                        $('#recurring-description').html(json['success']);
+                    }
+                }
+            });
+        });
+        //--></script>
+    <script type="text/javascript"><!--
+        $('#button-cart').on('click', function () {
+            $.ajax({
+                url: 'index.php?route=checkout/cart/add',
+                type: 'post',
+                data: $('#product input[type=\'text\'], #product input[type=\'hidden\'], #product input[type=\'radio\']:checked, #product input[type=\'checkbox\']:checked, #product select, #product textarea'),
+                dataType: 'json',
+                beforeSend: function () {
+                    $('#button-cart').button('loading');
+                },
+                complete: function () {
+                    $('#button-cart').button('reset');
+                },
+                success: function (json) {
+                    $('.alert-dismissible, .text-danger').remove();
+                    $('.form-group').removeClass('has-error');
+
+                    if (json['error']) {
+                        if (json['error']['option']) {
+                            for (i in json['error']['option']) {
+                                var element = $('#input-option' + i.replace('_', '-'));
+
+                                if (element.parent().hasClass('input-group')) {
+                                    element.parent().after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                } else {
+                                    element.after('<div class="text-danger">' + json['error']['option'][i] + '</div>');
+                                }
+                            }
+                        }
+
+                        if (json['error']['recurring']) {
+                            $('select[name=\'recurring_id\']').after('<div class="text-danger">' + json['error']['recurring'] + '</div>');
+                        }
+
+                        // Highlight any found errors
+                        $('.text-danger').parent().addClass('has-error');
+                    }
+
+                    if (json['success']) {
+
+                        setTimeout(function () {
+                            $('#carttotal').html('<img src="img/cart.svg" alt=""><span id="cart-total">' + json['total'] + '</span>');
+                        }, 100);
+
+                        $('html, body').animate({scrollTop: 0}, 'slow');
+                    }
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+        });
+        //--></script>
+    <script type="text/javascript"><!--
+        $('.date').datetimepicker({
+            language: '{{ datepicker }}',
+            pickTime: false
+        });
+
+        $('.datetime').datetimepicker({
+            language: '{{ datepicker }}',
+            pickDate: true,
+            pickTime: true
+        });
+
+        $('.time').datetimepicker({
+            language: '{{ datepicker }}',
+            pickDate: false
+        });
+
+        $('button[id^=\'button-upload\']').on('click', function () {
+            var node = this;
+
+            $('#form-upload').remove();
+
+            $('body').prepend('<form enctype="multipart/form-data" id="form-upload" style="display: none;"><input type="file" name="file" /></form>');
+
+            $('#form-upload input[name=\'file\']').trigger('click');
+
+            if (typeof timer != 'undefined') {
+                clearInterval(timer);
+            }
+
+            timer = setInterval(function () {
+                if ($('#form-upload input[name=\'file\']').val() != '') {
+                    clearInterval(timer);
+
+                    $.ajax({
+                        url: 'index.php?route=tool/upload',
+                        type: 'post',
+                        dataType: 'json',
+                        data: new FormData($('#form-upload')[0]),
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        beforeSend: function () {
+                            $(node).button('loading');
+                        },
+                        complete: function () {
+                            $(node).button('reset');
+                        },
+                        success: function (json) {
+                            $('.text-danger').remove();
+
+                            if (json['error']) {
+                                $(node).parent().find('input').after('<div class="text-danger">' + json['error'] + '</div>');
+                            }
+
+                            if (json['success']) {
+                                alert(json['success']);
+
+                                $(node).parent().find('input').val(json['code']);
+                            }
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                        }
+                    });
+                }
+            }, 500);
+        });
+        //--></script>
+    <script type="text/javascript"><!--
+        $('#review').delegate('.pagination a', 'click', function (e) {
+            e.preventDefault();
+
+            $('#review').fadeOut('slow');
+
+            $('#review').load(this.href);
+
+            $('#review').fadeIn('slow');
+        });
+
+        $('#review').load('index.php?route=product/product/review&product_id={{ product_id }}');
+
+        $('#button-review').on('click', function () {
+            $.ajax({
+                url: 'index.php?route=product/product/write&product_id={{ product_id }}',
+                type: 'post',
+                dataType: 'json',
+                data: $("#form-review").serialize(),
+                beforeSend: function () {
+                    $('#button-review').button('loading');
+                },
+                complete: function () {
+                    $('#button-review').button('reset');
+                },
+                success: function (json) {
+                    $('.alert-dismissible').remove();
+
+                    if (json['error']) {
+                        $('#review').after('<div class="alert alert-danger alert-dismissible"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+                    }
+
+                    if (json['success']) {
+                        $('#review').after('<div class="alert alert-success alert-dismissible"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+                        $('input[name=\'name\']').val('');
+                        $('textarea[name=\'text\']').val('');
+                        $('input[name=\'rating\']:checked').prop('checked', false);
+                    }
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('.thumbnails').magnificPopup({
+                type: 'image',
+                delegate: 'a',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+        //--></script>
+
+    {% endif %}
+{{ footer }} 

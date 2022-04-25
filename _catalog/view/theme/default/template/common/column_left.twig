@@ -1,0 +1,14 @@
+{% if modules %}
+<aside id="column-left" class="pt-4 pt-xl-0">
+        {% for module in modules %}
+             {{ module }} 
+        {% endfor %}
+        <div class="asideCta px-4 py-4">
+            <ul class="list-unstyled">
+                <li class="asideLink mb-3"><a href="#" data-toggle="modal" data-target="#callback">Вызвать замерщика</a></li>
+                <li class="asideLink"><a href="">Доставка и оплата</a></li>
+            </ul>
+        </div>
+</aside>
+{% endif %}
+

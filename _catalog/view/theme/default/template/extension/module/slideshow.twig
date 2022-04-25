@@ -1,0 +1,54 @@
+<section id="slider">
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-6 d-none d-lg-flex px-0">
+                <div class="slider">
+                    <div class="slideContainer">
+                        <div class="sliders-box">
+                            {% for banner in banners %}
+                                <div class="slide"><img src="{{ banner.image }}" alt="{{ banner.title }}"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <ul class='sliderDots'>
+                        {% set counter = 0 %}
+                        {% for banner in banners %}
+                            {% set counter = counter + 1 %}
+                            <li class="slideLi">0{{ counter }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 px-0">
+                <div class="mainTitle">
+                    <div class="title">
+                        <hgroup>
+                            <h1 class="text-center text-lg-left">Новая коллекция дверей</h1>
+                            <h2 class="text-center text-lg-left">Новая уникальная коллекция дверей «Mastino». <br>Успей купить по лучшей цене.</h2>
+                        </hgroup>
+                        <a href="/index.php?route=product/category&path=18" class="button yellowBtn mx-auto mr-lg-auto ml-lg-0 text-center">Перейти в каталог</a>
+                        <form action="#"  class="text-center text-lg-left">
+                            <p>Получить бесплатную консультацию</p><br>
+                            <div class="row align-items-center">
+                                <div class="col-xl-7">
+                                    <div class="inputGroup">
+                                        <label for="name" class="text-left mx-auto mr-lg-auto ml-lg-0 ">Имя</label>
+                                        <input type="text" id="name" name="name" placeholder="Ваше имя" class=" mx-auto mr-lg-auto ml-lg-0">
+                                    </div>
+                                    <div class="inputGroup">
+                                        <label for="phone" class="text-left mx-auto mr-lg-auto ml-lg-0 ">Телефон</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="Номер телефона" class=" mx-auto mr-lg-auto ml-lg-0">
+                                    </div>
+                                </div>
+                                <div class="col-xl-5 text-center text-lg-right">
+                                    <button type="submit" class="button">Оставить заявку</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

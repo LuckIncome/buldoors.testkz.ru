@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin
+Disallow: /index.php
+Disallow: /cart
+Disallow: /compare
+Disallow: /checkout
+Disallow: */?route=*
+Disallow: /storage/catalog/WhatsApp
+Disallow: /storage/catalog/петля
+Disallow: /catalog/aksessuary
+Disallow: /index.php?route=*
+Sitemap: https://buldoors.kz/sitemap.xml
+Host: https://buldoors.kz

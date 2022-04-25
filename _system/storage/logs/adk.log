@@ -1,0 +1,468 @@
+<#>[0;94m2019-05-14 08:29:36	[debug]	[0mModification check report:
+---------------------------------------
+OCMODification is in DB         : true
+OCMODification is enabled       : true
+OCMODification works            : true
+OCMOD file is in the /system dir: false
+VQMOD is present                : false
+VQMOD is enabled                : false
+VQMODification is added         : false
+VQMOD works                     : false
+---------------------------------------
+ . In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_update.php, line: 522
+<#>2019-05-14 08:29:36	[profiler]	[0;93mmodification: 0.00314 sec.
+[0m<#>[0;94m2019-05-14 08:29:36	[info]	[0mTask table has been created. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/task.php, line: 70
+<#>2019-05-14 08:29:36	[info]	Create folder '/var/www/vhosts/w3w.kz/shop.w3w.kz/system/storage/adk/adk_import/tmp/'. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/admin/controller/extension/module/adk_import.php, line: 720
+<#>2019-05-14 08:29:36	[info]	Class uses trait task. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/admin/controller/extension/module/adk_import.php, line: 725
+<#>2019-05-14 08:29:36	[info]	Task table has been created. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/task.php, line: 70
+<#>2019-05-14 08:29:37	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.15 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00002, [41mMemory:            [49m      624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.40053, Memory:               11.22 KB, Total memory:  165.82 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00411, Memory:                5.18 KB, Total memory:  178.94 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00001, Memory:                  776 B, Total memory:  261.91 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00053, Memory:               10.74 KB, Total memory:  276.38 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00029, Memory:                 1000 B, Total memory:  278.43 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00001, Memory:                  800 B, Total memory:  335.28 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.02055, Memory:              135.60 KB, Total memory:  333.89 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                      Advertikon helper load - [41mTime:[49m               0.45550, [41mMemory:            [49m  383.04 KB, Total memory:  385.19 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00317, [41mMemory:            [49m   17.53 KB, Total memory:  403.22 KB
+[0m<#>2019-05-14 08:29:37	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 1.5740, Total memory: -16559760 B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>[0;94m2019-05-14 08:29:41	[debug]	[0mModification check report:
+---------------------------------------
+OCMODification is in DB         : true
+OCMODification is enabled       : true
+OCMODification works            : true
+OCMOD file is in the /system dir: false
+VQMOD is present                : false
+VQMOD is enabled                : false
+VQMODification is added         : false
+VQMOD works                     : false
+---------------------------------------
+ . In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_update.php, line: 522
+<#>2019-05-14 08:29:41	[profiler]	[0;93mmodification: 0.00309 sec.
+[0m<#>2019-05-14 08:29:41	[debug]	Checking for updates.... In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_update.php, line: 70
+<#>2019-05-14 08:29:41	[debug]	No update is available. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_update.php, line: 92
+<#>2019-05-14 08:29:41	[info]	Current DB version is: . In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_update.php, line: 216
+<#>2019-05-14 08:29:41	[info]	Config: module_adk_import_update_version = . In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/setting.php, line: 77
+<#>2019-05-14 08:29:41	[profiler]	[0;93mupdate: 0.00630 sec.
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;93mVersion: 0.00029 sec.
+[0m<#>[0;94m2019-05-14 08:29:41	[info]	[0mSELECT * FROM `oc_product` as `p` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_description` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_attribute` ORDER BY `attribute_id` ASC LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_discount` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_filter` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_image` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `po`.*, `pov`.`product_option_value_id`, `pov`.`option_value_id`, `pov`.`quantity`, `pov`.`subtract`, `pov`.`price`, `pov`.`price_prefix`, `pov`.`points`, `pov`.`points_prefix`, `pov`.`weight`, `o`.`type`, `pov`.`weight_prefix` FROM `oc_product_option` as `po` LEFT JOIN `oc_product_option_value` as `pov` USING(`product_option_id`) LEFT JOIN `oc_option` as `o` ON(`po`.`option_id` = `o`.`option_id`) ORDER BY `po`.`product_id` ASC, `pov`.`product_option_value_id` ASC LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_recurring` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_related` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_reward` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_special` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `p2c`.* FROM `oc_product_to_category` as `p2c` LEFT JOIN `oc_category_to_store` as `c2s` USING(`category_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_to_store` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_to_download` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_product_to_layout` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_seo_url` WHERE `query` REGEXP 'product_id=()' LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `o`.*, `od`.`name`, `od`.`language_id` FROM `oc_option` as `o` LEFT JOIN `oc_option_description` as `od` USING(`option_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `ovd`.`name`, `ovd`.`language_id`, `ov`.*, `o`.`type` FROM `oc_option_value` as `ov` LEFT JOIN `oc_option_value_description` as `ovd` USING(`option_value_id`) LEFT JOIN `oc_option` as `o` ON(`o`.`option_id` = `ov`.`option_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `agd`.`name`, `agd`.`language_id`, `ag`.* FROM `oc_attribute_group` as `ag` LEFT JOIN `oc_attribute_group_description` as `agd` USING(`attribute_group_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `ad`.*, `a`.* FROM `oc_attribute` as `a` LEFT JOIN `oc_attribute_description` as `ad` USING(`attribute_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `cd`.*, `c`.* FROM `oc_category` as `c` LEFT JOIN `oc_category_description` as `cd` USING(`category_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_category_filter` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_category_to_store` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_category_to_layout` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_seo_url` WHERE `query` REGEXP 'category_id=()' LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_banner` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_banner_image` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_customer_group` LEFT JOIN `oc_customer_group_description` as `d` USING(`customer_group_id`) LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_customer` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_address` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_customer_transaction` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_customer_reward` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_customer_affiliate` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_coupon` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_coupon_category` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_coupon_product` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_manufacturer` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_manufacturer_to_store` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_seo_url` WHERE `query` REGEXP 'manufacturer_id=()' LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_history` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_option` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_product` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_recurring` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_recurring_transaction` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_order_total` LIMIT 0, 1. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT `manufacturer_id`, `name` FROM `oc_manufacturer`. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_stock_status` WHERE `language_id` = 2. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[info]	SELECT * FROM `oc_tax_class`. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/query.php, line: 1382
+<#>2019-05-14 08:29:41	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.06 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00001, [41mMemory:            [49m      624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00053, Memory:               11.22 KB, Total memory:  166.46 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00279, Memory:                5.04 KB, Total memory:  179.42 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00001, Memory:                  776 B, Total memory:  262.16 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00054, Memory:               10.74 KB, Total memory:  276.63 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00028, Memory:                 1000 B, Total memory:  278.68 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00001, Memory:                  800 B, Total memory:  335.73 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.02057, Memory:              135.56 KB, Total memory:  334.34 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                      Advertikon helper load - [41mT[49mime:               0.05115, [41mMemory:            [49m  383.49 KB, Total memory:  385.64 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00327, [41mMemory:            [49m   17.78 KB, Total memory:  403.93 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                         Advertikon\Renderer - [41m[49mTime:               0.00001, [41mMemory:            [49m      768 B, Total memory:  465.58 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Advertikon\Query - [41m[49mTime:               0.00001, [41mMemory:            [49m      744 B, Total memory:  471.01 KB
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00317, Memory:               44.98 KB, Total memory: -15087664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Text\Product_Model <  - Time:               0.00318, Memory:               44.83 KB, Total memory: -15042008 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_SKU <  - Time:               0.00164, Memory:               24.39 KB, Total memory: -15017040 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_UPC <  - Time:               0.00164, Memory:               24.42 KB, Total memory: -14992040 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_EAN <  - Time:               0.00159, Memory:               24.50 KB, Total memory: -14966960 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_JAN <  - Time:               0.00163, Memory:               24.44 KB, Total memory: -14941816 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Text\Product_ISBN <  - Time:               0.00174, Memory:               24.45 KB, Total memory: -14916792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_MPN <  - Time:               0.00171, Memory:               24.42 KB, Total memory: -14891792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Text\Product_Location <  - Time:               0.00169, Memory:               24.44 KB, Total memory: -14866776 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Text\Product_Name <  - Time:               0.00179, Memory:               24.41 KB, Total memory: -14841728 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Number\Product_Quantity <  - Time:               0.00174, Memory:               23.86 KB, Total memory: -14817288 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Stock_Status_Id - Time:               0.00337, Memory:               44.43 KB, Total memory: -14772280 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Select\Product_Image <  - Time:               0.00168, Memory:               23.72 KB, Total memory: -14747984 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Select\Product_Shipping <  - Time:               0.00167, Memory:               23.83 KB, Total memory: -14723576 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Tax_Class_Id <  - Time:               0.00173, Memory:               23.84 KB, Total memory: -14699160 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Weight_Class_Id - Time:               0.00165, Memory:               24.27 KB, Total memory: -14674312 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Length_Class_Id - Time:               0.00167, Memory:               23.85 KB, Total memory: -14649888 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Select\Product_Status <  - Time:               0.00167, Memory:               23.75 KB, Total memory: -14625432 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Number\Product_Price <  - Time:               0.00155, Memory:               23.71 KB, Total memory: -14601144 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Points <  - Time:               0.00162, Memory:               23.78 KB, Total memory: -14576792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m  \Advertikon\Adk_Import\Filter\Text\Product_Manufacturer <  - Time:               0.00161, Memory:               24.78 KB, Total memory: -14551440 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Weight <  - Time:               0.00162, Memory:               23.74 KB, Total memory: -14526848 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Length <  - Time:               0.00159, Memory:               23.82 KB, Total memory: -14502448 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Number\Product_Width <  - Time:               0.00159, Memory:               25.03 KB, Total memory: -14476800 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Height <  - Time:               0.00160, Memory:               23.86 KB, Total memory: -14452296 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m     \Advertikon\Adk_Import\Filter\Number\Product_Minimum <  - Time:               0.00161, Memory:               23.73 KB, Total memory: -14427968 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Viewed <  - Time:               0.00163, Memory:               23.70 KB, Total memory: -14403696 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Select\Product_Subtract <  - Time:               0.00158, Memory:               23.98 KB, Total memory: -14379088 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Date\Product_Date_Added <  - Time:               0.00317, Memory:               44.04 KB, Total memory: -14334440 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m \Advertikon\Adk_Import\Filter\Date\Product_Date_Modified <  - Time:               0.00166, Memory:               24.07 KB, Total memory: -14309792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Date\Product_Date_Available <  - Time:               0.00157, Memory:               23.83 KB, Total memory: -14285392 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               \Advertikon\Adk_Import\Filter\Select\Store <  - Time:               0.00158, Memory:               23.76 KB, Total memory: -14261064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                     \Advertikon\Adk_Import\Importer\Product - [41mT[49mime:               0.06579, [41mMemory:          [49m    975.69 KB, Total memory: -14264000 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Importer\Option - [41m[49mTime:               0.00307, [41mMemory:            [49m   73.75 KB, Total memory: -14189808 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00160, Memory:               23.77 KB, Total memory: -14093376 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             \Advertikon\Adk_Import\Importer\Attribute_Group - [41m[49mTime:               0.00359, [41mMemory:            [49m   96.10 KB, Total memory: -14093224 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   \Advertikon\Adk_Import\Importer\Attribute - [41m[49mTime:               0.00164, [41mMemory:            [49m   69.70 KB, Total memory: -14023080 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    \Advertikon\Adk_Import\Importer\Category - [41m[49mTime:               0.00171, [41mMemory:            [49m   72.57 KB, Total memory: -13950048 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Importer\Banner - [41m[49mTime:               0.00162, [41mMemory:            [49m   69.34 KB, Total memory: -13880272 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              \Advertikon\Adk_Import\Importer\Customer_Group - [41m[49mTime:               0.00172, [41mMemory:            [49m   69.75 KB, Total memory: -13810048 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        \Advertikon\Adk_Import\Filter\Text\Customer_Email <  - Time:               0.00156, Memory:               24.42 KB, Total memory: -13712160 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Text\Customer_Firstname <  - Time:               0.00155, Memory:               24.45 KB, Total memory: -13686920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m     \Advertikon\Adk_Import\Filter\Text\Customer_Lastname <  - Time:               0.00154, Memory:               24.42 KB, Total memory: -13661920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    \Advertikon\Adk_Import\Importer\Customer - [41m[49mTime:               0.00672, [41mMemory:            [49m  147.41 KB, Total memory: -13662184 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Text\Affiliate_Email <  - Time:               0.00154, Memory:               24.42 KB, Total memory: -13564216 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m   \Advertikon\Adk_Import\Filter\Text\Affiliate_Firstname <  - Time:               0.00160, Memory:               24.47 KB, Total memory: -13538952 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Text\Affiliate_Lastname <  - Time:               0.00153, Memory:               24.48 KB, Total memory: -13513896 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   \Advertikon\Adk_Import\Importer\Affiliate - [41m[49mTime:               0.00668, [41mMemory:            [49m  147.65 KB, Total memory: -13514096 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Coupon_Name <  - Time:               0.00162, Memory:               24.46 KB, Total memory: -13417896 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Importer\Coupon - [41m[49mTime:               0.00354, [41mMemory:            [49m   95.89 KB, Total memory: -13417768 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                \Advertikon\Adk_Import\Importer\Manufacturer - [41m[49mTime:               0.00153, [41mMemory:            [49m   69.01 KB, Total memory: -13348320 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                       \Advertikon\Adk_Import\Importer\Order - [41m[49mTime:               0.00158, [41mMemory:            [49m   69.34 KB, Total memory: -13278544 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00353, Memory:               11.00 KB, Total memory: -13265624 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                        Advertikon\Option <  - Time:               0.00001, Memory:                  784 B, Total memory: -13235456 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                           Creating constrain for Product <  - Time:               0.00013, Memory:                5.35 KB, Total memory: -13199544 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       advertikon\adk_import\importer\product_description <  - Time:               0.00211, Memory:               69.28 KB, Total memory: -13113512 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         advertikon\adk_import\importer\product_attribute <  - Time:               0.00193, Memory:               70.87 KB, Total memory: -13041928 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          advertikon\adk_import\importer\product_discount <  - Time:               0.00190, Memory:               70.64 KB, Total memory: -12970648 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            advertikon\adk_import\importer\product_filter <  - Time:               0.00195, Memory:               72.28 KB, Total memory: -12897728 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             advertikon\adk_import\importer\product_image <  - Time:               0.00170, Memory:               69.74 KB, Total memory: -12827368 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            advertikon\adk_import\importer\product_option <  - Time:               0.00342, Memory:               76.02 KB, Total memory: -12750712 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         advertikon\adk_import\importer\product_recurring <  - Time:               0.00218, Memory:               71.02 KB, Total memory: -12679040 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\product_related <  - Time:               0.00179, Memory:               69.08 KB, Total memory: -12609320 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            advertikon\adk_import\importer\product_reward <  - Time:               0.00176, Memory:               69.94 KB, Total memory: -12538648 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\product_special <  - Time:               0.00171, Memory:               70.19 KB, Total memory: -12467664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       advertikon\adk_import\importer\product_to_category <  - Time:               0.00331, Memory:               71.90 KB, Total memory: -12395128 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          advertikon\adk_import\importer\product_to_store <  - Time:               0.00210, Memory:               69.88 KB, Total memory: -12324544 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       advertikon\adk_import\importer\product_to_download <  - Time:               0.00189, Memory:               69.62 KB, Total memory: -12254224 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         advertikon\adk_import\importer\product_to_layout <  - Time:               0.00176, Memory:               70.18 KB, Total memory: -12183384 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        \Advertikon\Adk_Import\Filter\Text\Alias_Query <  <  - Time:               0.00185, Memory:               24.57 KB, Total memory: -12085416 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         advertikon\adk_import\importer\product_url_alias <  - Time:               0.00388, Memory:               98.25 KB, Total memory: -12084568 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00009, Memory:                3.01 KB, Total memory: -12081664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00006, Memory:                3.00 KB, Total memory: -12077920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               Creating constrain for Product description <  - Time:               0.00001, Memory:                  888 B, Total memory: -12076632 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -12069472 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00004, Memory:                3.01 KB, Total memory: -12065720 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Creating constrain for Product attribute <  - Time:               0.00001, Memory:                  744 B, Total memory: -12064496 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -12060056 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                  Creating constrain for Product discount <  - Time:               0.00001, Memory:                  760 B, Total memory: -12058560 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00013, Memory:                3.01 KB, Total memory: -12054040 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    Creating constrain for Product filter <  - Time:               0.00001, Memory:                  736 B, Total memory: -12052608 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -12048136 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                     Creating constrain for Product image <  - Time:               0.00001, Memory:                  736 B, Total memory: -12046704 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00010, Memory:                3.01 KB, Total memory: -12041032 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00005, Memory:                3.00 KB, Total memory: -12037208 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    Creating constrain for Product option <  - Time:               0.00001, Memory:                  736 B, Total memory: -12036032 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00006, Memory:                3.01 KB, Total memory: -12031328 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Creating constrain for Product recurring <  - Time:               0.00001, Memory:                  744 B, Total memory: -12029880 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -12025336 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Product related <  - Time:               0.00001, Memory:                  736 B, Total memory: -12023904 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -12019432 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    Creating constrain for Product reward <  - Time:               0.00001, Memory:                  736 B, Total memory: -12018000 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -12013496 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Product special <  - Time:               0.00001, Memory:                  736 B, Total memory: -12012064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -12005624 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               Creating constrain for Product to category <  - Time:               0.00001, Memory:                  744 B, Total memory: -12004176 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00008, Memory:                3.01 KB, Total memory: -11999064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                  Creating constrain for Product to store <  - Time:               0.00001, Memory:                  736 B, Total memory: -11997632 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00008, Memory:                3.01 KB, Total memory: -11992504 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               Creating constrain for Product to download <  - Time:               0.00001, Memory:                  744 B, Total memory: -11991056 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00008, Memory:                3.01 KB, Total memory: -11986560 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Creating constrain for Product to layout <  - Time:               0.00001, Memory:                  744 B, Total memory: -11985112 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Product seo url <  - Time:               0.00070, Memory:                2.18 KB, Total memory: -11980760 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               Render Advertikon\Adk_Import\Importer\Product - [41mTi[49mme:               0.10693, [41mMemory:         [49m       1.34 MB, Total memory: -11936880 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11934824 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Option_Name <  - Time:               0.00168, Memory:               24.70 KB, Total memory: -11908072 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00005, Memory:                3.00 KB, Total memory: -11904280 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                            Creating constrain for Option <  - Time:               0.00001, Memory:                  872 B, Total memory: -11898488 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              advertikon\adk_import\importer\option_value <  - Time:               0.00335, Memory:               71.98 KB, Total memory: -11819776 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Number\Option_Id <  - Time:               0.00162, Memory:               23.62 KB, Total memory: -11794920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00005, Memory:                3.07 KB, Total memory: -11790976 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      Creating constrain for Option value <  - Time:               0.00001, Memory:                  880 B, Total memory: -11789728 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Importer\Option - [41m[49mTime:               0.01324, [41mMemory:            [49m  138.22 KB, Total memory: -11798248 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11796080 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Attribute group <  - Time:               0.00001, Memory:                  736 B, Total memory: -11791048 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       Render Advertikon\Adk_Import\Importer\Attribute_Group - [41m[49mTime:               0.00427, [41mMemory:            [49m    8.54 KB, Total memory: -11789192 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11787048 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        \Advertikon\Adk_Import\Filter\Text\Attribute_Name <  - Time:               0.00257, Memory:               24.66 KB, Total memory: -11759312 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00007, Memory:                3.00 KB, Total memory: -11755520 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                         Creating constrain for Attribute <  - Time:               0.00001, Memory:                  880 B, Total memory: -11750440 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             Render Advertikon\Adk_Import\Importer\Attribute - [41m[49mTime:               0.00746, [41mMemory:            [49m   38.59 KB, Total memory: -11750104 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11747960 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Text\Category_Name <  - Time:               0.00156, Memory:               24.47 KB, Total memory: -11721352 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00004, Memory:                3.00 KB, Total memory: -11717560 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               \Advertikon\Adk_Import\Filter\Select\Store <  - Time:               0.00004, Memory:                3.00 KB, Total memory: -11714032 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                          Creating constrain for Category <  - Time:               0.00001, Memory:                  872 B, Total memory: -11708320 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\category_filter <  - Time:               0.00207, Memory:               68.81 KB, Total memory: -11628680 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         advertikon\adk_import\importer\category_to_store <  - Time:               0.00177, Memory:               69.51 KB, Total memory: -11558440 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        advertikon\adk_import\importer\category_to_layout <  - Time:               0.00183, Memory:               69.96 KB, Total memory: -11487832 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        \Advertikon\Adk_Import\Filter\Text\Alias_Query <  <  - Time:               0.00006, Memory:                3.10 KB, Total memory: -11411272 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        advertikon\adk_import\importer\category_url_alias <  - Time:               0.00215, Memory:               76.40 KB, Total memory: -11410784 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Number\Category_Id <  - Time:               0.00182, Memory:               23.65 KB, Total memory: -11386232 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Category filter <  - Time:               0.00001, Memory:                  880 B, Total memory: -11384608 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Number\Category_Id <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -11380064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Creating constrain for Category to store <  - Time:               0.00001, Memory:                  744 B, Total memory: -11378616 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Number\Category_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -11373368 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Creating constrain for Category to layout <  - Time:               0.00001, Memory:                  744 B, Total memory: -11371920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                  Creating constrain for Category seo url <  - Time:               0.00070, Memory:                1.77 KB, Total memory: -11367984 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Render Advertikon\Adk_Import\Importer\Category - [41m[49mTime:               0.02246, [41mMemory:            [49m  365.12 KB, Total memory: -11384488 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11382336 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Banner_Name <  - Time:               0.00193, Memory:               24.63 KB, Total memory: -11355736 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                            Creating constrain for Banner <  - Time:               0.00001, Memory:                  872 B, Total memory: -11350856 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              advertikon\adk_import\importer\banner_image <  - Time:               0.00184, Memory:               70.02 KB, Total memory: -11276640 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Number\Banner_Id <  - Time:               0.00168, Memory:               23.62 KB, Total memory: -11251688 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00005, Memory:                3.00 KB, Total memory: -11247896 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      Creating constrain for Banner image <  - Time:               0.00001, Memory:                  880 B, Total memory: -11246624 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Importer\Banner - [41m[49mTime:               0.01002, [41mMemory:            [49m  130.38 KB, Total memory: -11253608 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11251440 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m   \Advertikon\Adk_Import\Filter\Text\Customer_Group_Name <  - Time:               0.00170, Memory:               24.68 KB, Total memory: -11224712 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Select\Language <  - Time:               0.00004, Memory:                3.00 KB, Total memory: -11220920 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    Creating constrain for Customer group <  - Time:               0.00001, Memory:                  880 B, Total memory: -11215832 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        Render Advertikon\Adk_Import\Importer\Customer_Group - [41m[49mTime:               0.00631, [41mMemory:            [49m   39.78 KB, Total memory: -11213304 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -11211168 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                          Creating constrain for Customer <  - Time:               0.00001, Memory:                1.16 KB, Total memory: -11202976 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   advertikon\adk_import\importer\address <  - Time:               0.00191, Memory:               70.46 KB, Total memory: -11130224 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      advertikon\adk_import\importer\customer_transaction <  - Time:               0.00167, Memory:               69.15 KB, Total memory: -11060344 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\customer_reward <  - Time:               0.00173, Memory:               68.92 KB, Total memory: -10990784 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        advertikon\adk_import\importer\customer_affiliate <  - Time:               0.00174, Memory:               68.39 KB, Total memory: -10921744 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                           Creating constrain for Address <  - Time:               0.00001, Memory:                  592 B, Total memory: -10919736 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Number\Customer_Id <  - Time:               0.00171, Memory:               23.89 KB, Total memory: -10894208 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Creating constrain for Customer transaction <  - Time:               0.00001, Memory:                  888 B, Total memory: -10892568 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Number\Customer_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10888072 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Customer reward <  - Time:               0.00001, Memory:                  736 B, Total memory: -10886640 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Creating constrain for Customer affiliate <  - Time:               0.00001, Memory:                  608 B, Total memory: -10884568 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Render Advertikon\Adk_Import\Importer\Customer - [41m[49mTime:               0.01766, [41mMemory:            [49m  313.14 KB, Total memory: -10899672 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -10897456 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                            Creating constrain for Coupon <  - Time:               0.00001, Memory:                  872 B, Total memory: -10891576 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\coupon_category <  - Time:               0.00181, Memory:               69.62 KB, Total memory: -10813544 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            advertikon\adk_import\importer\coupon_product <  - Time:               0.00176, Memory:               69.22 KB, Total memory: -10743608 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Number\Coupon_Id <  - Time:               0.00169, Memory:               23.65 KB, Total memory: -10718880 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Coupon category <  - Time:               0.00001, Memory:                  880 B, Total memory: -10717256 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    Creating constrain for Coupon product <  - Time:               0.00001, Memory:                  600 B, Total memory: -10715192 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Importer\Coupon - [41m[49mTime:               0.01042, [41mMemory:            [49m  174.60 KB, Total memory: -10724504 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -10722336 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      Creating constrain for Manufacturer <  - Time:               0.00001, Memory:                  600 B, Total memory: -10711816 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m     advertikon\adk_import\importer\manufacturer_to_store <  - Time:               0.00168, Memory:               69.34 KB, Total memory: -10637664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        \Advertikon\Adk_Import\Filter\Text\Alias_Query <  <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10561176 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    advertikon\adk_import\importer\manufacturer_url_alias <  - Time:               0.00200, Memory:               76.41 KB, Total memory: -10560528 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             Creating constrain for Manufacturer to store <  - Time:               0.00001, Memory:                  608 B, Total memory: -10558880 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Creating constrain for Manufacturer seo url <  - Time:               0.00062, Memory:                1.78 KB, Total memory: -10555048 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          Render Advertikon\Adk_Import\Importer\Manufacturer - [41m[49mTime:               0.00995, [41mMemory:            [49m  167.33 KB, Total memory: -10556656 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -10554520 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00169, Memory:               23.90 KB, Total memory: -10528656 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                             Creating constrain for Order <  - Time:               0.00001, Memory:                  872 B, Total memory: -10524160 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             advertikon\adk_import\importer\order_history <  - Time:               0.00168, Memory:               68.26 KB, Total memory: -10428368 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              advertikon\adk_import\importer\order_option <  - Time:               0.00168, Memory:               68.25 KB, Total memory: -10359408 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             advertikon\adk_import\importer\order_product <  - Time:               0.00165, Memory:               68.29 KB, Total memory: -10290456 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           advertikon\adk_import\importer\order_recurring <  - Time:               0.00167, Memory:               68.50 KB, Total memory: -10221336 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96madvertikon\adk_import\importer\order_recurring_transaction < - Time:               0.00171, Memory:               68.02 KB, Total memory: -10152664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               advertikon\adk_import\importer\order_total <  - Time:               0.00169, Memory:               68.26 KB, Total memory: -10083768 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10080032 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                     Creating constrain for Order history <  - Time:               0.00001, Memory:                  736 B, Total memory: -10078600 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10071840 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      Creating constrain for Order option <  - Time:               0.00001, Memory:                  736 B, Total memory: -10070408 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -10065928 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                     Creating constrain for Order product <  - Time:               0.00001, Memory:                  736 B, Total memory: -10064496 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10057184 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   Creating constrain for Order recurring <  - Time:               0.00001, Memory:                  736 B, Total memory: -10055752 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       Creating constrain for Order recurring transaction <  - Time:               0.00001, Memory:                  616 B, Total memory: -10053656 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m            \Advertikon\Adk_Import\Filter\Number\Order_Id <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -10049008 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                       Creating constrain for Order total <  - Time:               0.00001, Memory:                  736 B, Total memory: -10047576 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Render Advertikon\Adk_Import\Importer\Order - [41m[49mTime:               0.02209, [41mMemory:           [49m   485.18 KB, Total memory: -10070992 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Number\Product_Id <  - Time:               0.00007, Memory:                3.18 KB, Total memory: -9893848 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m         \Advertikon\Adk_Import\Filter\Text\Product_Model <  - Time:               0.00005, Memory:                3.19 KB, Total memory: -9889872 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_SKU <  - Time:               0.00005, Memory:                3.23 KB, Total memory: -9886096 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_UPC <  - Time:               0.00005, Memory:                3.30 KB, Total memory: -9882232 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_EAN <  - Time:               0.00005, Memory:                3.30 KB, Total memory: -9878368 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_JAN <  - Time:               0.00005, Memory:                3.36 KB, Total memory: -9874448 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Text\Product_ISBN <  - Time:               0.00005, Memory:                3.41 KB, Total memory: -9870472 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m           \Advertikon\Adk_Import\Filter\Text\Product_MPN <  - Time:               0.00005, Memory:                3.22 KB, Total memory: -9866680 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Text\Product_Location <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -9863128 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          \Advertikon\Adk_Import\Filter\Text\Product_Name <  - Time:               0.00005, Memory:                3.04 KB, Total memory: -9859520 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Number\Product_Quantity <  - Time:               0.00005, Memory:                3.04 KB, Total memory: -9855960 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Stock_Status_Id - Time:               0.00005, Memory:                3.02 KB, Total memory: -9852408 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Select\Product_Image <  - Time:               0.00005, Memory:                3.06 KB, Total memory: -9848816 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Select\Product_Shipping <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -9845288 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Tax_Class_Id <  - Time:               0.00005, Memory:                3.07 KB, Total memory: -9841696 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Weight_Class_Id - Time:               0.00005, Memory:                3.08 KB, Total memory: -9838064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Select\Product_Length_Class_Id - Time:               0.00006, Memory:                3.07 KB, Total memory: -9834448 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Select\Product_Status <  - Time:               0.00007, Memory:                3.04 KB, Total memory: -9830752 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Number\Product_Price <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -9827216 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Points <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -9823656 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m  \Advertikon\Adk_Import\Filter\Text\Product_Manufacturer <  - Time:               0.00005, Memory:                3.01 KB, Total memory: -9820120 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Weight <  - Time:               0.00005, Memory:                3.06 KB, Total memory: -9816520 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Length <  - Time:               0.00005, Memory:                3.05 KB, Total memory: -9812936 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       \Advertikon\Adk_Import\Filter\Number\Product_Width <  - Time:               0.00005, Memory:                3.03 KB, Total memory: -9809368 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Height <  - Time:               0.00005, Memory:                3.04 KB, Total memory: -9805776 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m     \Advertikon\Adk_Import\Filter\Number\Product_Minimum <  - Time:               0.00008, Memory:                3.08 KB, Total memory: -9802168 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m      \Advertikon\Adk_Import\Filter\Number\Product_Viewed <  - Time:               0.00005, Memory:                3.02 KB, Total memory: -9798640 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Select\Product_Subtract <  - Time:               0.00005, Memory:                3.05 KB, Total memory: -9795064 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m    \Advertikon\Adk_Import\Filter\Date\Product_Date_Added <  - Time:               0.00006, Memory:                3.06 KB, Total memory: -9791472 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m \Advertikon\Adk_Import\Filter\Date\Product_Date_Modified <  - Time:               0.00010, Memory:                3.02 KB, Total memory: -9787912 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m\Advertikon\Adk_Import\Filter\Date\Product_Date_Available <  - Time:               0.00006, Memory:                3.04 KB, Total memory: -9784344 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                     \Advertikon\Adk_Import\Exporter\Product - [41m[49mTime:               0.00850, [41mMemory:            [49m  208.73 KB, Total memory: -9785704 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Exporter\Option - [41m[49mTime:               0.00221, [41mMemory:            [49m   74.55 KB, Total memory: -9710696 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             \Advertikon\Adk_Import\Exporter\Attribute_Group - [41m[49mTime:               0.00204, [41mMemory:            [49m   73.82 KB, Total memory: -9636400 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   \Advertikon\Adk_Import\Exporter\Attribute - [41m[49mTime:               0.00197, [41mMemory:            [49m   74.23 KB, Total memory: -9561664 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    \Advertikon\Adk_Import\Exporter\Category - [41m[49mTime:               0.00220, [41mMemory:            [49m   77.08 KB, Total memory: -9484104 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Exporter\Banner - [41m[49mTime:               0.00213, [41mMemory:            [49m   73.03 KB, Total memory: -9410568 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              \Advertikon\Adk_Import\Exporter\Customer_Group - [41m[49mTime:               0.00202, [41mMemory:            [49m   72.58 KB, Total memory: -9337568 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                    \Advertikon\Adk_Import\Exporter\Customer - [41m[49mTime:               0.00247, [41mMemory:            [49m   88.18 KB, Total memory: -9248944 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                   \Advertikon\Adk_Import\Exporter\Affiliate - [41m[49mTime:               0.00331, [41mMemory:            [49m   80.53 KB, Total memory: -9167976 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                      \Advertikon\Adk_Import\Exporter\Coupon - [41m[49mTime:               0.00202, [41mMemory:            [49m   75.46 KB, Total memory: -9092056 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                \Advertikon\Adk_Import\Exporter\Manufacturer - [41m[49mTime:               0.00195, [41mMemory:            [49m   72.28 KB, Total memory: -9019336 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                       \Advertikon\Adk_Import\Exporter\Order - [41m[49mTime:               0.00401, [41mMemory:            [49m   85.30 KB, Total memory: -8933600 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  704 B, Total memory: -8929024 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m               Render Advertikon\Adk_Import\Exporter\Product - [41m[49mTime:               0.00078, [41mMemory:            [49m    3.01 KB, Total memory: -8927792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  712 B, Total memory: -8925592 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Exporter\Option - [41m[49mTime:               0.00074, [41mMemory:            [49m    2.99 KB, Total memory: -8924312 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  704 B, Total memory: -8922120 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m       Render Advertikon\Adk_Import\Exporter\Attribute_Group - [41m[49mTime:               0.00072, [41mMemory:            [49m    3.03 KB, Total memory: -8920776 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  688 B, Total memory: -8918640 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m             Render Advertikon\Adk_Import\Exporter\Attribute - [41m[49mTime:               0.00071, [41mMemory:            [49m    2.99 KB, Total memory: -8917304 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8915160 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Render Advertikon\Adk_Import\Exporter\Category - [41m[49mTime:               0.00071, [41mMemory:            [49m    2.95 KB, Total memory: -8913856 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8911704 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Exporter\Banner - [41m[49mTime:               0.00069, [41mMemory:            [49m    2.94 KB, Total memory: -8910416 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8908248 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m        Render Advertikon\Adk_Import\Exporter\Customer_Group - [41m[49mTime:               0.00071, [41mMemory:            [49m    2.99 KB, Total memory: -8906904 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8904768 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m              Render Advertikon\Adk_Import\Exporter\Customer - [41m[49mTime:               0.00074, [41mMemory:            [49m    2.94 KB, Total memory: -8903472 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8901256 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                Render Advertikon\Adk_Import\Exporter\Coupon - [41m[49mTime:               0.00069, [41mMemory:            [49m    2.94 KB, Total memory: -8899960 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8897792 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m          Render Advertikon\Adk_Import\Exporter\Manufacturer - [41m[49mTime:               0.00071, [41mMemory:            [49m    2.98 KB, Total memory: -8896464 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                                            Item renderer <  - Time:               0.00001, Memory:                  680 B, Total memory: -8894328 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m                 Render Advertikon\Adk_Import\Exporter\Order - [41m[49mTime:               0.00069, [41mMemory:            [49m    2.94 KB, Total memory: -8893040 B
+[0m<#>2019-05-14 08:29:41	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 0.7889, Total memory: -8471352 B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.06 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00001, [41m[49mMemory:                  624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00049, Memory:               11.22 KB, Total memory:  165.82 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00117, Memory:                4.88 KB, Total memory:  178.46 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00002, Memory:                  776 B, Total memory:  260.70 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00053, Memory:               10.75 KB, Total memory:  275.18 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00027, Memory:                 1000 B, Total memory:  277.23 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00001, Memory:                  800 B, Total memory:  333.60 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.00952, Memory:              134.73 KB, Total memory:  332.21 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon helper load - [41mTime:           [49m    0.01969, [41mMemory:             [49m 381.36 KB, Total memory:  383.51 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                 Advertikon admin model load - [41mT[49mime:               0.00184, [41m[49mMemory:               17.24 KB, Total memory:  401.26 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                                   Clear TMP - [41m[49mTime:               0.00024, [41m[49mMemory:                5.36 KB, Total memory:  407.08 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 0.0239, Total memory:  362.64 KB <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.06 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00001, [41m[49mMemory:                  624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00062, Memory:               11.22 KB, Total memory:  165.82 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00120, Memory:                4.89 KB, Total memory:  178.47 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00001, Memory:                  776 B, Total memory:  260.72 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00050, Memory:               10.75 KB, Total memory:  275.20 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00026, Memory:                 1000 B, Total memory:  277.25 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00001, Memory:                  800 B, Total memory:  333.54 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.00927, Memory:              134.65 KB, Total memory:  332.14 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                      Advertikon helper load - [41mTime:    [49m           0.01977, [41mMemory:        [49m      381.30 KB, Total memory:  383.45 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00177, [41m[49mMemory:               17.24 KB, Total memory:  401.19 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                                CHECK MYISAM - [41m[49mTime:               0.00056, [41m[49mMemory:                  792 B, Total memory:  524.93 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m                                         Advertikon\Renderer - [41m[49mTime:               0.00001, [41m[49mMemory:                  768 B, Total memory:  541.44 KB
+[0m<#>2019-05-14 08:29:43	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 0.0417, Total memory:  503.83 KB <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>[0;94m2019-05-14 08:29:44	[info]	[0mGetting installation status.... In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_support.php, line: 416
+<#>2019-05-14 08:29:44	[info]	Connecting to "http://shop.advertikon.com.ua/support/license.php". In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/advertikon.php, line: 3398
+<#>2019-05-14 08:29:46	[info]	Request ended. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/advertikon.php, line: 3423
+<#>2019-05-14 08:29:46	[info]	[]. In file: /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_support.php, line: 426
+<#>2019-05-14 08:29:46	[info]	Installation data missed in /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/trait_support.php:431
+<#>2019-05-14 08:29:46	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.08 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00001, [41m[49mMemory:                  624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00055, Memory:               11.22 KB, Total memory:  167.99 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00265, Memory:                5.04 KB, Total memory:  180.96 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00001, Memory:                  776 B, Total memory:  263.71 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00052, Memory:               10.74 KB, Total memory:  278.18 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00029, Memory:                 1000 B, Total memory:  280.23 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00001, Memory:                  800 B, Total memory:  336.62 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.01963, Memory:              134.91 KB, Total memory:  335.22 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                      Advertikon helper load - [41m[49mTime:               0.04898, [41mMemory:             [49m 384.38 KB, Total memory:  386.53 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00318, [41m[49mMemory:               17.53 KB, Total memory:  404.56 KB
+[0m<#>2019-05-14 08:29:46	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 1.7009, Total memory:  375.23 KB <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.08 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00001, [41m[49mMemory:                  624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00057, Memory:               11.22 KB, Total memory:  168.14 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00294, Memory:                5.04 KB, Total memory:  181.10 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00001, Memory:                  776 B, Total memory:  263.83 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00056, Memory:               10.74 KB, Total memory:  278.30 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00032, Memory:                 1000 B, Total memory:  280.35 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00002, Memory:                  800 B, Total memory:  336.75 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.02665, Memory:              134.90 KB, Total memory:  335.36 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                      Advertikon helper load - [41mT[49mime:               0.05963, [41mMemory:        [49m      384.51 KB, Total memory:  386.66 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00489, [41m[49mMemory:               17.54 KB, Total memory:  404.70 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m                                           Convert to InnoDB - [41mTime:             [49m  0.91008, [41m[49mMemory:               24.44 KB, Total memory:  548.97 KB
+[0m<#>2019-05-14 08:30:58	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 0.9934, Total memory:  493.66 KB <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m<#>[0;94m2019-05-14 08:32:40	[error]	[0m[0;91mexception 'Advertikon\Adk_Import\Exception' with message 'Class 'Advertikon\Adk_Import\Exporter\products' doesn\'t exist' in /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/adk_import/exporter/exporter.php:389
+Stack trace:
+#0 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/adk_import/exporter/exporter.php(348): Advertikon\Adk_Import\Exporter\Exporter::get_exporter_by_name('Products')
+#1 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/adk_import/exporter/exporter.php(270): Advertikon\Adk_Import\Exporter\Exporter::init_exporter(Object(PhpOffice\PhpSpreadsheet\Worksheet\Worksheet))
+#2 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/adk_import/exporter/exporter.php(235): Advertikon\Adk_Import\Exporter\Exporter::iterate_priority()
+#3 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/library/advertikon/adk_import/exporter/exporter.php(212): Advertikon\Adk_Import\Exporter\Exporter::iterate_files(Array)
+#4 /var/www/vhosts/w3w.kz/shop.w3w.kz/admin/controller/extension/module/adk_import.php(803): Advertikon\Adk_Import\Exporter\Exporter::process(Array, Array, Object(Advertikon\Adk_Import\Advertikon))
+#5 [internal function]: ControllerExtensionModuleAdkImport->export()
+#6 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/storage/modification/system/engine/action.php(79): call_user_func_array(Array, Array)
+#7 /var/www/vhosts/w3w.kz/shop.w3w.kz/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array)
+#8 [internal function]: ControllerStartupRouter->index()
+#9 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/storage/modification/system/engine/action.php(79): call_user_func_array(Array, Array)
+#10 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/storage/modification/system/engine/router.php(68): Action->execute(Object(Registry))
+#11 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/storage/modification/system/engine/router.php(57): Router->execute(Object(Action))
+#12 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/framework.php(165): Router->dispatch(Object(Action), Object(Action))
+#13 /var/www/vhosts/w3w.kz/shop.w3w.kz/system/startup.php(104): require_once('/var/www/vhosts...')
+#14 /var/www/vhosts/w3w.kz/shop.w3w.kz/admin/index.php(19): start('admin')
+#15 {main}
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Memory limit:  256M, Initial memory usage: 19.14 MB >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                             OC admin Controller __construct - [41m[49mTime:               0.00002, [41mMemory:            [49m      624 B, Total memory:    1.63 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                       Advertikon\Console <  - Time:               0.00077, Memory:               11.22 KB, Total memory:  168.04 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                         Advertikon\Cache <  - Time:               0.00478, Memory:                5.04 KB, Total memory:  181.01 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                      Advertikon\Query <  <  - Time:               0.00002, Memory:                  776 B, Total memory:  263.74 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                    Advertikon\Console <  <  - Time:               0.00094, Memory:               10.74 KB, Total memory:  278.22 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                      Advertikon\Cache <  <  - Time:               0.00051, Memory:                 1000 B, Total memory:  280.26 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                        Advertikon\Url <  <  - Time:               0.00002, Memory:                  800 B, Total memory:  336.66 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                      Advertikon\Language <  - Time:               0.03191, Memory:              134.90 KB, Total memory:  335.26 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                      Advertikon helper load - [41mTim[49me:               0.08126, [41mMemory:            [49m  384.42 KB, Total memory:  386.57 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                 Advertikon admin model load - [41m[49mTime:               0.00496, [41mMemory:            [49m   17.53 KB, Total memory:  404.60 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                                Load vendors - [41m[49mTime:               0.00002, [41mMemory:            [49m      544 B, Total memory:  538.97 KB
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m                                                 Spreadsheet - [41mTime:         [49m      0.29328, [41m[49mMemory:             -16283640 B, Total memory: -15742912 B
+[0m<#>2019-05-14 08:32:40	[profiler]	[0;96m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Total time: 0.4081, Total memory: -15756248 B <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[0m

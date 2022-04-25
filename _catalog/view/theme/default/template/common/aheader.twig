@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}" />
+<meta name="keywords" content="{{ keywords }}" />
+<!--<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+<script src="https://buldoors.kz/catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="https://buldoors.kz/js/scripts.min.js" type="text/javascript"></script>
+<script src="https://buldoors.kz/js/jquery.mask.min.js" type="text/javascript"></script>
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<script>
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 100 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val(  ui.values[ 0 ] +"тг"+ " - " + ui.values[ 1 ]+ "тг" );
+      }
+    });
+    $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +"тг"  +
+      " - "+$( "#slider-range" ).slider( "values", 1 ) + "тг");
+  } );
+  
+  
+
+</script>
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="preload" href="css/main.min.css" as="style" onload="this.rel=\'stylesheet\'" onerror="this.rel=\'stylesheet\'">
+<link rel="stylesheet" href="css/main.min.css">
+<!--<link rel="stylesheet" href="css/jquery-ui.css">-->
+<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+{% if styles %}
+{% for style in styles %}
+    <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% endif %}
+<link rel="stylesheet" href="css/jqueryui2.css">
+{% if scripts %}
+{% for script in scripts %}
+    <script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+{% endif %} 
+<!--<script src="https://buldoors.kz/catalog/view/javascript/common.js" type="text/javascript"></script>-->
+{% for link in links %}
+    <link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+ <!-- Yandex.Metrika counter -->
+<!--<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(37055460, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/37055460" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+-->
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+
+<nav id="top">
+    <div class="container">
+        <div class="row topLine align-items-center">
+            <div class="col d-none d-lg-flex">
+
+                <!--search-->
+                {{ search }}
+                <!-- search-->
+
+            </div>
+            <div class="col-12 col-lg-auto p-0 px-sm-2">
+                <ul class="nav justify-content-around justify-content-sm-between justify-content-lg-end">
+                    <li class="nav-item"><a class="nav-link button instaBtn" href="" target="_blank"><i
+                                    class="fa fa-instagram"></i></a></li>
+                    <li class="nav-item"><a class="nav-link button emailBtn" href="mailto:info@buldoors.kz">info@buldoors.kz</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link button phoneBtn" href="tel:+77172987777"> +7 (717)  <span>298–88–88</span></a>
+                    </li>
+                    <li class="nav-item d-none d-md-inline-block"><a class="nav-link button yellowBtn" href="#" data-toggle="modal" data-target="#callback">Заказать звонок</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!--<div style="width: 200px; height: 200px; border: 3px solid red;"></div>-->
+<header>
+    <div class="container">
+        <div class="row headerLine align-items-start align-items-xl-center">
+            <div class="col-auto order-first headerLogo">
+                <a href="/">
+                    <img src="img/logo.svg" alt="">
+                </a>
+            </div>
+            <div id="mainIcons" class="col col-xl-auto order-xl-last order-2 justify-content-end pl-0 px-sm-3 px-xl-2">
+                <ul class="list-inline navIcons">
+                    <li class="list-inline-item d-none d-lg-block">
+                        {{ language }}
+                    </li>
+                    <li class="list-inline-item">
+                        <!--cart-->
+                        {{ cart }}
+                        <!--cart-->
+                    </li>
+                    <li class="list-inline-item d-none d-lg-block">
+                        <a class="button" id="comparetotal" href="{{ compare }}"><img src="img/compare.svg" alt="">
+                        {% if text_compare != 0 %}
+                            <span id="compare-total">{{ text_compare }}</span>
+                        {%  endif %}
+                        </a>
+                    </li>
+                    <li class="list-inline-item d-block d-lg-none">
+                        <a class="button" href="#" data-toggle="modal" data-target="#searchModal"><img src="img/search.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            <div id="mainMenu" class="col-auto col-sm-2 col-xl order-last order-xl-2 pr-2 pl-0 p-sm-0">
+                <nav id="menu" class="navbar navbar-expand-xl navbar-light p-0">
+                    <button class="navbar-toggler ml-auto border-0" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-expanded="false" aria-controls="mainNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="mainNavbar">
+                        <a href="#" class="closeBtn"><i class="">&times;</i></a>
+                        <ul class="navbar-nav mx-auto">
+                            {{ menu }}
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+<div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="callback" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body" style="background-color: #444444;">
+                <div class="input-group" id="searchs">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input class="form-control" name="searchs" placeholder="Я хочу купить..." type="text" value="">
+                    <span class="input-group-btn">
+                        <button class="button" type="button">Найти</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

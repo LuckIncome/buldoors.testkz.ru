@@ -1,0 +1,22 @@
+{% if error_warning %}
+<div class="alert alert-warning alert-dismissible"><i class="fa fa-exclamation-circle"></i> {{ error_warning }}</div>
+{% endif %}
+{% if payment_methods %}
+    <div class="sectionPayment mb-xl-4 mb-5">
+        <h5 class="mb-4">Способы оплаты</h5>
+        <div class="form-group">
+            <select name="paymentMethod" id="paymentMethod" class="form-control rounded">
+                <option value="" selected disabled hidden >Выберите способ оплаты</option>
+
+        {% for payment_method in payment_methods %}
+            {% if payment_method.code == code or not code %}
+            {% set code = payment_method.code %}
+                <option value="{{ payment_method.code }}" selected>{{ payment_method.title }}</option>
+            {% else %}
+            <option value="{{ payment_method.code }}" >{{ payment_method.title }}</option>
+            {% endif %}
+        {% endfor %}
+            </select>
+        </div>
+    </div>
+{% endif %}

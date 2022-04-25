@@ -1,0 +1,723 @@
+{{ header }}
+<div id="product-category">
+
+    <section id="breadcrumbs">
+        <div class="container-fluid px-0 py-3">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 mb-1 d-none d-sm-block">
+                        <ul class="list-inline">
+                            {% for breadcrumb in breadcrumbs %}
+                                <li class="list-inline-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="col-12">
+                        <h1 class="m-0">{{ heading_title }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% if categories %}
+        {% if heading_title == 'Каталог' %}
+
+            <section id="allCategories" class="pt-3 pt-xl-5">
+                <div class="container-fluid px-0">
+                    <div class="row">
+                        {% for category in categories|batch((categories|length / 4)|round(1, 'ceil')) %}
+                            {% for child in category %}
+                                <div class="col-md-6 allCategoriesItemWrap mb-3 my_category_list_529">
+									<div class="allCategoriesItem">
+                                        <img src="{{ child.img }}" alt="{{ child.name }}" class="w-100 h-100">
+                                        <div class="allCategoriesItemCaption">
+                                            <small>{{ child.meta }}</small>
+                                            <a href="{{ child.href }}"><h2>{{ child.shot_name }}</h2></a>
+                                            <a href="{{ child.href }}" class="titleWhite goCatalog">Перейти</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+
+
+                    <div class="container my-5" id="tabsCategory">
+                        <ul class="row scrollRow flex-nowrap">
+                            <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-1">Новинки</a></li>
+                            <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-2">Хиты продаж</a>
+                            </li>
+                            <li class="col-9 pl-5 pl-sm-0 col-lg-4 col-xl-3 scrollItem"><a
+                                        href="#tabsCategory-3">Акции</a></li>
+                        </ul>
+                        <div id="tabsCategory-1" class="p-0">
+
+                            <div class="doorSlider owl-carousel newDoor row py-5 m-0">
+                                {% for product in new_product %}
+                                    <div class="doorSlide">
+                                        <a href="{{ product.href }}"><img src="{{ product.thumb }}"
+                                                                          alt="{{ product.name }}">
+                                            <div class="doorSlideCaption p-4">
+                                                <h4 class="mb-1">{{ product.name }}</h4>
+                                                {% if product.category %}
+                                                    {% for category_name in product.category %}
+                                                        <p class="mb-2">{{ category_name.name }}</p>
+                                                    {% endfor %}
+                                                {% endif %}
+                                                <p class="price"><span>{% if product.special %}
+                                                        {{ product.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                                style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ product.price }} <span
+                                                                    style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                            {{ product.price }} <span>₸</span>
+                                                        {% endif %}</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='newDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все новинки</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="tabsCategory-2" class="p-0">
+
+                            <div class="doorSlider owl-carousel hitDoor row py-5">
+
+                                {% for bestseller in bestsellers %}
+                                    <div class="doorSlide">
+                                        <a href="{{ bestseller.href }}"><img src="{{ bestseller.thumb }}"
+                                                                             alt="{{ bestseller.name }}"></a>
+                                        <div class="doorSlideCaption p-4">
+                                            <h4 class="mb-1">{{ bestseller.name }}</h4>
+                                            {% if bestseller.category %}
+                                                {% for category_name in bestseller.category %}
+                                                    <p class="mb-2">{{ category_name.name }}</p>
+                                                {% endfor %}
+                                            {% endif %}
+                                            <p class="price"><span>{% if bestseller.special %}
+                                                        {{ bestseller.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                            style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ bestseller.price }} <span
+                                                                style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                        {{ bestseller.price }} <span>₸</span>
+                                                    {% endif %}</span></p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='hitDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все хиты</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="tabsCategory-3" class="p-0">
+
+                            <div class="doorSlider owl-carousel saleDoor row py-5">
+
+                                {% for special in specials %}
+                                    <div class="doorSlide">
+                                        <a href="{{ special.href }}"><img src="{{ special.thumb }}"
+                                                                          alt="{{ special.name }}"></a>
+                                        <div class="doorSlideCaption p-4">
+                                            <h4 class="mb-1">{{ special.name }}</h4>
+                                            {% if special.category %}
+                                                {% for category_name in special.category %}
+                                                    <p class="mb-2">{{ category_name.name }}</p>
+                                                {% endfor %}
+                                            {% endif %}
+                                            <p class="price"><span>{% if special.special %}
+                                                        {{ special.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                            style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ special.price }} <span
+                                                                style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                        {{ special.price }} <span>₸</span>
+                                                    {% endif %}</span></p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='saleDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все акции</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {% endif %}
+
+
+    {% else %}
+        {% if heading_title == 'Новости' %}
+
+            <section id="news" class="py-3 py-xl-5">
+                <div class="container">
+                    <div class="row d-flex justify-content-around">
+                        {% if news %}
+                            {% for new in news %}
+                                    <div class="col-md-4 col-sm-6 p-4">
+                                        <div class="newsItem">
+                                            <a href="{{ new.href }}" class=""><img src="{{ new.thumb }}" alt="{{ new.sku }}" class="d-block"></a>
+                                            <div class="p-3 newsCaption">
+                                                <time datetime="" class="d-block mb-3">{{ new.date|date("d.m.Y") }}</time>
+                                                <p class="mb-3"><strong>{{ new.sku }}</strong></p>
+                                                <span class="mb-2 d-block"><p>{{ new.description|slice(0,90) }}...</p></span>
+                                                <a href="{{ new.href }}" class="moreNews">Подробнее</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </section>
+
+        {% elseif heading_title == 'О компании' %}
+
+            <section id="aboutCompany" class="py-3 py-xl-5">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        <div id="sideBar" class="col-auto pt-4 pt-xl-0 col-xl-3 mx-auto mx-xl-0 order-last order-xl-first">
+                            <div class="leftBar">
+                                <h4>Входные и межкомнатные двери</h4>
+                                <ul>
+                                    <li>Продажа</li>
+                                    <li>Доставка</li>
+                                    <li>Качественная установка</li>
+                                </ul>
+                            </div>
+                            <a href="" class="download"><img src="img/pdf2.png" alt="">Скачать наш прайс-лист</a>
+                            <h5>Вы можете стать нашим представителем</h5>
+                            <form action="">
+                                <div>
+                                    <label for="namePartner">Имя</label>
+                                    <input id="namePartner" name="namePartner" type="text" placeholder="Андрей">
+                                </div>
+                                <div>
+                                    <label for="namePartner">Телефон </label>
+                                    <input id="namePartner" name="namePartner" type="text" placeholder="+7 (707) 555 51 23">
+                                </div>
+                                <button type="submit">Оставить заявку</button>
+                            </form>
+                        </div>
+                        <div class="col-xl-9">
+                            <div class="row">
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <div class="videoAbout">
+                                        <video src="" poster="img/aboutImg.png"></video>
+                                        <button type="button" data-toggle="modal" data-target="#videoYoutube"></button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="videoAboutCaption px-4">
+                                        <div>
+                                            <h5>Презентационное видео о работе завода</h5>
+                                            <p>Уникальная производственная база завода, объединяющая лучшие российские и зарубежные технологии, и высокая степень автоматизации позволяют производить до 800 дверей в сутки. В основе производства стальных дверей «Бульдорс» — автоматизированный технологический процесс «от заготовки до упаковки», который обеспечивает полную автоматизацию процесса изготовления продукции.
+                                                <br><br> Производственные комплексы завода представлены современным высокотехнологичным оборудованием!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 py-4">
+                                    <p class="text-justify mb-4">Автоматические линии изготовления дверных полотен итальянской компании «Salvagnini» позволяют увеличить скорость, мощность производства и качество выпускаемой продукции, максимально исключив человеческий фактор.
+                                        <br><br>Автоматические прокатные станы профилирования дверных коробок обеспечивают геометрическую точность профилей стальных дверей и позволяют изготавливать их из единого листа металла, что обеспечивает дополнительную прочность.
+                                        <br><br>Роботизированные сварочные комплексы японского производства «Kawasaki» выполняют сварочный шов, не требующий зачистки, что экономит время на операцию и увеличивает прочность соединения.
+                                        <br><br>Японская установка лазерной резки «Mazak» позволяет производить прецизионные (высокоточные) операции по лазерной резке металла с высочайшей степенью сложности.</p>
+                                    <img src="img/aboutCollage.png" alt="" class="img-fluid d-block mb-4">
+                                    <p class="text-justify">Большой парк станков с ЧПУ обеспечивает высокую точность исполнения программных операций без участия человека.
+                                        <br><br>Автоматические линии порошково-полимерного покрытия швейцарской компании «Gema» обеспечивают равномерное нанесение покрытия в электростатическом поле с помощью автоматических распылителей, что обеспечивает высокое качество нанесения покрытия на дверное полотно.
+                                    </p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a1.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Роботизированный сварочный комплекс</p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a2.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Покрасочный конвейер автоматической линии</p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a3.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Вход в напылительную автоматическую камеру</p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a4.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Автоматическая линия профилирования дверных коробок</p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a5.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Оснастка линии профилирования</p>
+                                </div>
+                                <div class="col-sm-6 col-md-4 pt-4">
+                                    <div class="mb-3"><img src="img/a6.png" alt="" class="img-fluid w-100"></div>
+                                    <p class="px-3 text-center" style="font-size: 14px;">Линия изготовления дверных полотен</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {% elseif heading_title == 'Акции' %}
+
+            <section id="salesPage" class="py-3 py-xl-5">
+                <div class="container px-lg-0">
+                    <div class="row">
+                        {% if sales %}
+                        {% for sale in sales %}
+
+                            <div class="col-12 col-md-6 col-xl-12 px-4 salesItem mb-4">
+                                <div class="row">
+                                    <div class="col-xl-5 px-0">
+                                        <div class="salesImg" style="position: relative;overflow: hidden;">
+                                            <img src="{{ sale.thumb }}" alt="{{ sales.sku }}" class="w-100" style="object-fit: cover">
+                                            <span class="text-white m-0" style="position: absolute;left: 40px; top: 50%; transform: translateY(-50%);font-size: 60px;font-weight: 900;line-height: 1;">{{ sale.model }} <span class="d-block m-0" style="font-size: 30px;">Скидка</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-7 px-0" style="background-color: #f9f9f9;">
+                                        <div class="d-flex align-items-center h-100">
+                                            <div class="salesCation p-4">
+                                                <h4 class="mb-3" style="font-size: 22px;color: #000000;font-weight: bold;">{{ sale.sku }}</h4>
+                                                <p class="mb-4" style="font-size: 14px;color: #777777;">{{ sale.description }}</p>
+                                                <span class="d-block" style="font-size: 12px;color: #a1a1a1;font-weight: 300;">{{ sale.date|date('d.m.Y') }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+                    <div class="row px-md-4 pt-4">
+                        <div class="col-sm-6 text-left">{{ pagination }}</div>
+                    </div>
+                </div>
+            </section>
+
+        {% elseif heading_title == 'Партнеры' %}
+
+            <section id="partnerPage" class="py-5">
+                <div class="container-fluid px-0">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 pr-lg-5">
+                                <h3 class="partTitle" style="color: #000000;margin-bottom: 20px;">Стань нашим представителем сегодня!</h3>
+                                <h4 style="font-size: 26px;line-height: 38px;color: #000000;font-weight: bold;margin-bottom: 20px;">Вас ждет выгодное партнёрство!</h4>
+                                <ul class="p-0 pl-lg-4" style="list-style: none; font-size: 16px;line-height: 29px;">
+                                    <li style="background:url('../img/liStyleWhy.png') no-repeat left center; padding-left: 30px;margin-bottom: 20px;">Доступная ценовая политика компании, которая позволит Вам стабильно зарабатывать на наших дверях!</li>
+                                    <li style="background:url('../img/liStyleWhy.png') no-repeat left center; padding-left: 30px;margin-bottom: 20px;">Производственная мощность – 900 дверей в сутки. Мы изготовим для Вас любую партию дверей в самый кратчайший срок!</li>
+                                    <li style="background:url('../img/liStyleWhy.png') no-repeat left center; padding-left: 30px;margin-bottom: 20px;">Выгодные условия сотрудничества: возможность предоставления исключительного права на реализацию дверей «Бульдорс» в Вашем регионе.</li>
+                                    <li style="background:url('../img/liStyleWhy.png') no-repeat left center; padding-left: 30px;margin-bottom: 20px;">Активная рекламно-маркетинговая политика. Мы гарантируем Вам содействие в продвижении продукта!</li>
+                                    <li style="background:url('../img/liStyleWhy.png') no-repeat left center; padding-left: 30px;margin-bottom: 20px;">Мы оказываем помощь в логистике и имеем возможность заказа железнодорожного и автомобильного транспорта.</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-5 partFormWrap" style="background: url('../img/partnerBg.png') no-repeat center left;-webkit-background-size: cover;background-size: cover;display: flex;align-items: center;border-radius: 10px">
+                                <form action="" class="partForm" style="margin: 60px auto">
+                                    <h5 class="text-center text-lg-left" style="color: #ffffff;font-weight: bold;font-size: 20px;margin-bottom: 20px;">Оставьте заявку и мы свяжемся с вами в ближайшее время</h5>
+                                    <input type="text" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #ffffff;" class="partnerInput" placeholder="ФИО" name="part-name">
+                                    <input type="text" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #ffffff;" class="partnerInput" placeholder="Телефон" name="part-tel">
+                                    <input type="text" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #ffffff;" class="partnerInput" placeholder="E-mail" name="part-email">
+                                    <input type="text" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #ffffff;" class="partnerInput" placeholder="Город" name="part-city">
+                                    <input type="text" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #ffffff;" class="partnerInput" placeholder="Название компании" name="part-company">
+                                    <select name="part-order" style="background-color: transparent;border: .5px solid #ffffff; border-radius: 10px;width: 100%;height: 40px;margin-bottom: 20px;font-size: 14px;line-height: 39px;padding: 0 10px;color: #bbbbbb;">
+                                        <option type="text" value="part-opt">Оптовые продажи</option>
+                                        <option type="text" value="part-roz">Розничные продажи</option>
+                                    </select>
+                                    <button type="submit" style="height: 40px;border: 0;background-color: #ffffff;font-size: 13px;color: #000000;border-radius: 40px;width: 190px;text-align: center;">Оставить заявку</button>
+                                </form>
+                                <style>
+                                    .partForm {
+                                        width: 460px;
+                                    }
+                                    .partForm input::placeholder {
+                                        color: #bbbbbb;
+                                    }
+                                    @media (max-width:1200px) {
+                                        .partForm {
+                                            width: 300px;
+                                        }
+                                    }
+                                    @media (max-width:992px) {
+                                        .partFormWrap {
+                                            background-position: center center;
+                                            border-radius: 0px;
+                                        }
+                                        .partForm button {
+                                            display: block;
+                                            margin: auto;
+                                        }
+                                    }
+
+
+                                    @media (max-width:576px) {
+                                        .partTitle {
+                                            font-size: 34px;
+                                            font-weight: bold;
+                                            line-height: 40px;
+                                        }
+                                    }
+
+
+                                </style>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        {% elseif heading_title == 'Контакты' %}
+
+            <section id="contactPage" class="py-3 py-xl-5">
+				<iframe width='100%' height='770' src='https://my.matterport.com/show/?m=uqMUqfEkAD9&lang=ru' frameborder='0' allowfullscreen allow='vr'></iframe>
+				<div class="container px-lg-0">
+                    <div class="row main_center">
+                       
+                        
+                    </div>
+                </div>
+               
+            </section>
+
+        {% else %}
+            {% if products %}
+            <section id="categoryPage">
+                <div class="container px-lg-0">
+                    <div class="row mb-5">
+                        <div class="col-auto p-0">
+                          {{ column_left }}
+                        </div>
+                        <div class="col px-3 py-4 p-md-0">
+                            <div class="row py-4 px-lg-4 d-none d-lg-block">
+                                <div class="col-12">
+                                    <div class="sortProd d-inline-block">
+                                        <span class="sortLimit pr-3">Сортировка</span>
+                                        <select name="input-sort" id="input-sort" onchange="location = this.value;"
+                                                class="sortProduct px-3 py-2">
+                                            {% for sorts in sorts %}
+                                                {% if sorts.value == '%s-%s'|format(sort, order) %}
+
+
+
+                                                    <option value="{{ sorts.href }}" selected="selected"
+                                                            hidden>{{ sorts.text }}</option>
+
+
+
+                                                {% else %}
+
+
+
+                                                    <option value="{{ sorts.href }}">{{ sorts.text }}</option>
+
+
+
+                                                {% endif %}
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="limitProd d-inline-block pl-3 pl-xl-4">
+                                        <span class="sortLimit pr-3">Товаров на странице</span>
+                                        {% set limit_counter = 1 %}
+                                        {% for limits in limits %}
+                                            {% if limits.value == limit %}
+
+
+                                                {% set limit_counter = limit_counter + 1 %}
+                                                <label for="counter{{ limit_counter }}"
+                                                       class="limitProductLabel active px-3 mr-1 mr-xl-3 py-2 ">{{ limits.text }}
+                                                    <input type="radio" name="limitProduct"
+                                                           onclick="location = this.value"
+                                                           id="counter{{ limit_counter }}" class="d-none"
+                                                           value="{{ limits.href }}">
+                                                </label>
+
+
+
+                                            {% else %}
+
+
+                                                {% set limit_counter = limit_counter + 1 %}
+                                                <label for="counter{{ limit_counter }}"
+                                                       class="limitProductLabel px-3 mr-1 mr-xl-3 py-2">{{ limits.text }}
+                                                    <input type="radio" name="limitProduct"
+                                                           onclick="location = this.value"
+                                                           id="counter{{ limit_counter }}" class="d-none"
+                                                           value="{{ limits.href }}">
+                                                </label>
+
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <div class="viewProd d-inline-block float-right pr-3 pr-xl-0">
+                                        <button id="grid-view" class="btnTable btnView"></button>
+                                        <button id="list-view" class="btnList btnView "></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row filterButton d-xl-none">
+                                <div class="col-12">
+                                    <button type="button">Фильтр товаров</button>
+                                </div>
+                            </div>
+                            <div class="row px-md-4 bg-white pt-4 pt-xl-0 allProducts">
+
+                                {% for product in products %}
+                                    <div class="col-sm-6 col-lg-4 col-xl-3 p-0 prodWrap" itemscope itemtype="http://schema.org/Product">
+                                        <div class="productItem">
+                                            <div style="position: absolute; top: 20px; left: 10px;">
+                                                {% if product.special %}
+                                                    <span style="position: relative; padding: 8px 30px; font-size: 14px; color: #ffffff;margin-bottom: 10px; display: block; background-color: rgba(215,52,52,.8);width: 146px;text-align: center; z-index: 1; border-radius: 5px; line-height: 1;">Акция</span>
+                                                {% endif %}
+
+                                                {% if bestsellers %}
+
+                                                    {% for bestseller in bestsellers %}
+
+                                                        {% if bestseller.product_id == product.product_id %}
+
+                                                            <span style="position: relative; padding: 8px 30px; font-size: 14px; color: #ffffff;margin-bottom: 10px; display: block; background-color: rgba(237,191,19,.8);width: 146px;text-align: center; z-index: 1; border-radius: 5px; line-height: 1;">Хит продаж</span>
+
+                                                        {% endif %}
+
+                                                    {% endfor %}
+
+                                                {% endif %}
+
+                                                {% if new_product %}
+
+                                                    {% for new in new_product %}
+
+                                                        {% if new.product_id == product.product_id %}
+
+                                                            <span style="position: relative; padding: 8px 30px; font-size: 14px; color: #ffffff; margin-bottom: 10px; display: block; background-color: rgba(100,209,72,.8);width: 146px;text-align: center; z-index: 1; border-radius: 5px; line-height: 1;">Новинка</span>
+
+                                                        {% endif %}
+
+                                                    {% endfor %}
+
+                                                {% endif %}
+                                            </div>
+                                            <a href="{{ product.href }}" class="imgProd px-3 pb-3 pt-5">
+											{# product.thumb #}
+                                                <img src="{{ product.thumb }}" alt="{{ product.name }}"
+                                                     class="px-3 pb-3 pt-4"  itemprop="image">
+                                            </a>
+                                            <div class="prodCaption list">
+                                                <span class="article text-right px-3 pt-2">Артикул: <span>{{ product.article }}</span></span>
+                                                <div class="prodTitle py-2 px-3">
+                                                    <span>{{ product.model }}</span>
+                                                    <h4 itemprop="name"><a href="{{ product.href }}">{{ product.name }}</a></h4>
+                                                </div>
+
+                                                {% if product.stock == 'Нет в наличии' or product.stock == 'Предзаказ' %}
+                                                    <span class="prodInstock text-danger"
+                                                          style="background: none">{{ product.stock }}</span>
+                                                {% else %}
+                                                    <span class="prodInstock">{{ product.stock }}</span>
+
+                                                {% endif %}
+                                                <div class="prodQty">
+                                                    <button id="minus{{ product.product_id }}" class="minus"></button>
+                                                    <input id="countProduct{{ product.product_id }}"
+                                                           class="countProduct" type="text" value="1">
+                                                    <button id="plus{{ product.product_id }}" class="plus"></button>
+                                                    <script>
+														$('#plus{{ product.product_id }}').click(function () {
+																//if ($(this).prev().val() < 100) {
+																$(this).prev().val(+$(this).prev().val() + 1);
+																//}
+														});
+														$('#minus{{ product.product_id }}').click(function () {
+																if ($(this).next().val() > 1) {
+																 $(this).next().val(+$(this).next().val() - 1);
+																}
+														});
+                                                    </script>
+                                                </div>
+                                                <span class="prodPrice px-3 pb-2" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+												<meta itemprop="priceCurrency" content="KZT" />
+                                                    {% if product.special %}
+                                                        {{ product.special }} <span itemprop="price">₸</span>&nbsp;&nbsp;<s
+                                                            style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ product.price }} <span
+                                                                style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                        {{ product.price }} <span>₸</span>
+                                                    {% endif %}</span>
+                                                <div class="prodDesc px-3 py-2"  itemprop="description">
+                                                    <p>Каркас: <span>{{ product.upc }}</span></p>
+                                                    <p>Внутреннее заполнение: <span>{{ product.ean }}</span></p>
+                                                    <p>Облицовка: <span>{{ product.jan }}</span>
+                                                    </p>
+                                                </div>
+                                                <div class="buttonsProd px-3 pb-3">
+                                                    {% if product.stock == 'Нет в наличии' or product.stock == 'Предзаказ' %}
+                                                        <span class="prodInstock p-0 text-danger"
+                                                              style="background: none">{{ product.stock }}</span>
+                                                    {% else %}
+                                                        <span class="prodInstock">{{ product.stock }}</span>
+
+                                                    {% endif %}
+                                                    <div class="prodBtns mt-3">
+                                                        <button id="cart{{ product.product_id }}" class="prodBtnBuy"
+                                                                onclick="cart.add('{{ product.product_id }}', 1);">
+                                                            Купить
+                                                        </button>
+                                                        <button class="prodBtnComp d-none d-lg-inline"
+                                                                onclick="compare.add('{{ product.product_id }}');"><img
+                                                                    src="img/prodBtnComp.png" alt="{{ product.name }}">
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row px-md-4 pt-4">
+                                <div class="col-sm-6 text-left">{{ pagination }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mb-5" id="tabsCategory">
+                        <ul class="row scrollRow flex-nowrap">
+                            <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-1">Новинки</a></li>
+                            <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabsCategory-2">Хиты продаж</a>
+                            </li>
+                            <li class="col-9 pl-5 pl-sm-0 col-lg-4 col-xl-3 scrollItem"><a
+                                        href="#tabsCategory-3">Акции</a></li>
+                        </ul>
+                        <div id="tabsCategory-1" class="p-0">
+
+                            <div class="doorSlider owl-carousel newDoor row py-5 m-0">
+                                {% for product in new_product %}
+                                    <div class="doorSlide">
+                                        <a href="{{ product.href }}"><img src="{{ product.thumb }}"
+                                                                          alt="{{ product.name }}">
+                                            <div class="doorSlideCaption p-4">
+                                                <h4 class="mb-1">{{ product.name }}</h4>
+                                                {% if product.category %}
+                                                    {% for category_name in product.category %}
+                                                        <p class="mb-2">{{ category_name.name }}</p>
+                                                    {% endfor %}
+                                                {% endif %}
+                                                <p class="price"><span>{% if product.special %}
+                                                        {{ product.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                                style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ product.price }} <span
+                                                                    style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                            {{ product.price }} <span>₸</span>
+                                                        {% endif %}</span></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='newDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все новинки</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="tabsCategory-2" class="p-0">
+
+                            <div class="doorSlider owl-carousel hitDoor row py-5">
+
+                                {% for bestseller in bestsellers %}
+                                    <div class="doorSlide">
+                                        <a href="{{ bestseller.href }}"><img src="{{ bestseller.thumb }}"
+                                                                             alt="{{ bestseller.name }}"></a>
+                                        <div class="doorSlideCaption p-4">
+                                            <h4 class="mb-1">{{ bestseller.name }}</h4>
+                                            {% if bestseller.category %}
+                                                {% for category_name in bestseller.category %}
+                                                    <p class="mb-2">{{ category_name.name }}</p>
+                                                {% endfor %}
+                                            {% endif %}
+                                            <p class="price"><span>{% if bestseller.special %}
+                                                        {{ bestseller.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                            style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ bestseller.price }} <span
+                                                                style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                        {{ bestseller.price }} <span>₸</span>
+                                                    {% endif %}</span></p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='hitDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все хиты</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="tabsCategory-3" class="p-0">
+
+                            <div class="doorSlider owl-carousel saleDoor row py-5">
+
+                                {% for special in specials %}
+                                    <div class="doorSlide">
+                                        <a href="{{ special.href }}"><img src="{{ special.thumb }}"
+                                                                          alt="{{ special.name }}"></a>
+                                        <div class="doorSlideCaption p-4">
+                                            <h4 class="mb-1">{{ special.name }}</h4>
+                                            {% if special.category %}
+                                                {% for category_name in special.category %}
+                                                    <p class="mb-2">{{ category_name.name }}</p>
+                                                {% endfor %}
+                                            {% endif %}
+                                            <p class="price"><span>{% if special.special %}
+                                                        {{ special.special }} <span>₸</span>&nbsp;&nbsp;<s
+                                                            style="color: #BDBDBD;font-size: 14px;position: relative;top: -2px;">{{ special.price }} <span
+                                                                style="color: #BDBDBD;font-size: 14px;">₸</span></s>
+                                                    {% else %}
+                                                        {{ special.price }} <span>₸</span>
+                                                    {% endif %}</span></p>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-9 d-none d-md-block">
+                                    <ul class='saleDots owl-dots'></ul>
+                                </div>
+                                <div class="col-md-3 text-center text-md-right pr-md-5">
+                                    <a href="" class="allDoors titlesYellow d-none">Все акции</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+
+</div>
+
+{{ footer }} 

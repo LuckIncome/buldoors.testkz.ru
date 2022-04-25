@@ -1,0 +1,105 @@
+
+
+<section id="popularProduct" class="py-3">
+
+    <div class="container py-3">
+        <div id="tabs">
+            <ul class="row scrollRow flex-nowrap">
+                <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabs-1">Новинки</a></li>
+                <li class="col-9 col-lg-4 col-xl-3 scrollItem"><a href="#tabs-2">Хиты продаж</a></li>
+                <li class="col-9 pl-5 pl-sm-0 col-lg-4 col-xl-3 scrollItem"><a href="#tabs-3">Акции</a></li>
+            </ul>
+            <div id="tabs-1" class="p-0">
+
+                <div class="doorSlider owl-carousel newDoor row py-5 m-0">
+                    {% for product in products %}
+                        <div class="doorSlide">
+                            <a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}">
+                            <div class="doorSlideCaption p-4">
+                                <h4 class="mb-1">{{ product.name }}</h4>
+                                {% if product.category %}
+                                {% for category_name in product.category %}
+                                <p class="mb-2">{{ category_name.name }}</p>
+                                {% endfor %}
+                                {% endif %}
+                                <p class="price"><span>{{ product.price }}</span> тг.</p>
+                            </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-9 d-none d-md-block">
+                        <ul class='newDots owl-dots'></ul></div>
+                    <div class="col-md-3 text-center text-md-right pr-md-5">
+                        <a href="" class="allDoors titlesYellow d-none">Все новинки</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="tabs-2" class="p-0">
+
+                <div class="doorSlider owl-carousel hitDoor row py-5">
+
+                    {% for bestseller in bestsellers %}
+                        <div class="doorSlide">
+                            <a href="{{ bestseller.href }}"><img src="{{ bestseller.thumb }}" alt="{{ bestseller.name }}"></a>
+                            <div class="doorSlideCaption p-4">
+                                <h4 class="mb-1">{{ bestseller.name }}</h4>
+                                {% if bestseller.category %}
+                                    {% for category_name in bestseller.category %}
+                                        <p class="mb-2">{{ category_name.name }}</p>
+                                    {% endfor %}
+                                {% endif %}
+                                <p class="price"><span>{{ bestseller.price }}</span> тг.</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-9 d-none d-md-block">
+                        <ul class='hitDots owl-dots'></ul></div>
+                    <div class="col-md-3 text-center text-md-right pr-md-5">
+                        <a href="" class="allDoors titlesYellow d-none">Все хиты</a>
+                    </div>
+                </div>
+
+            </div>
+            <div id="tabs-3" class="p-0">
+
+                <div class="doorSlider owl-carousel saleDoor row py-5">
+
+                    {% for special in specials %}
+                        <div class="doorSlide">
+                            <a href="{{ special.href }}"><img src="{{ special.thumb }}" alt="{{ special.name }}"></a>
+                            <div class="doorSlideCaption p-4">
+                                <h4 class="mb-1">{{ special.name }}</h4>
+                                {% if special.category %}
+                                    {% for category_name in special.category %}
+                                        <p class="mb-2">{{ category_name.name }}</p>
+                                    {% endfor %}
+                                {% endif %}
+                                <p class="price"><span>{{ special.price }}</span> тг.</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-9 d-none d-md-block">
+                        <ul class='saleDots owl-dots'></ul></div>
+                    <div class="col-md-3 text-center text-md-right pr-md-5">
+                        <a href="" class="allDoors titlesYellow d-none">Все акции</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+

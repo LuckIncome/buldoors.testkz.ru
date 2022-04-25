@@ -1,0 +1,25 @@
+{% for module in modules %}
+{{ module }}
+{% endfor %}
+<script>
+jQuery('.mainTitle button').click(function(){
+    //alert('click');
+            //alert(jQuery.fn.jquery);
+    var mes1 = jQuery('.inputGroup').eq(0).children().last().val();
+    var mes2 = jQuery('.inputGroup').eq(1).children().last().val();
+    var mes_sum = 'Имя: '+mes1+', телефон: '+mes2;
+    $.ajax({
+      type: 'POST',
+      url: 'https://buldoors.kz/index.php?route=common/ms',
+      //data: 'mes_sum=Andrew&nickname=Aramis',
+      data: 'mes_sum='+mes_sum,
+      success: function(data){
+          alert(data);
+          //alert('success');
+        //$('.results').html(data);
+      }
+    });
+});
+
+
+</script>
